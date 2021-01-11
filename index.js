@@ -1,10 +1,6 @@
-const cheerio = require ('cheerio'),
-//request = require ('request-promise'),
-fetch = require('node-fetch');
-
-const fs = require('fs');
 const Discord = require('discord.js');
-const { triggerAsyncId } = require('async_hooks');
+const fs = require('fs');
+const config = require("../token/config.json");
 const path = require("./data.json");
 
 
@@ -80,6 +76,6 @@ client.on('message', async message =>{
 });
 
 
-client.login("NzcyMTY5NDQ1NTgwNzM0NDk1.X52w1g.lcmXO0UuKhtNTCV4CSFsMsKgh8Q");
+client.login(config.token);
     
     

@@ -1,0 +1,205 @@
+{   "contenido":
+    {
+           "Saludos":[
+            {"preguntas": ["hola", "como estas", "hey", "oye"]},
+            {"respuestas": ["Hola, ¿como puedo ayudarte?", 
+                  "Hola, espero que estes bien, Dime en que podria ayudarte"
+                , "¿Tienes algun problema en el juego?"]}
+        ],           
+
+            "respuesta secreta": [
+            {"preguntas":["necesito mi respuesta secreta",
+                "recuperarrs",
+                "como recupero mi rs", "como recupero mi respuesta secreta", 
+                "donde puedo ver mi respuesta secreta",
+                "recuperar mi rs", 
+                "olvide clave secr",
+                "recuperar mi respuesta secreta", 
+                "recuperar mi clave secreta",
+                "recuperar clave secreta",
+                "recuperar rs",
+                "olvide mi rs", 
+                "olvide rs",
+                "recuperar rs",
+                "olvide mi respuesta secreta",
+                "necesito mi rs",
+                "recuperar respuesta secreta",
+                "necesito recuperar mi rs"]},
+            {"respuestas":["Puede recuperar su clave secreta siguiendo los pasos de la guía"]}              
+            ]
+
+,           "LauncherError": [
+            {"preguntas":["launcher dejo de funcionar",
+                "clienterror",
+                "launcher se paro",
+                "launcher se cierra",
+                "launcher se debuto",
+                "launcher no me funciona",
+                "silkroad dejo de funcionar",
+                "client se debuto",
+                "client se cierra",
+                "error con mi client",
+                "client se paro"]},
+            {"respuestas":["Puede solucionar este error siguiendo los pasos que estan en la guia, si el problema continúa, contacte a uno de los GM's"]}              
+            ],
+
+            "RecuperarID":[
+                {"preguntas":["olvide mi id",
+                    "recuperarid",
+                    "olvide mi usuario",
+                    "como recupero mi id",
+                    "como recupero mi usuario",
+                    "como recuperar mi id",
+                    "recuperar id",
+                    "recuperar usuario",
+                    "recuperar user",
+                    "recuperar mi id",
+                    "recuperar mi usuario"]}          
+            ],
+            
+            "RecuperarPW":[
+                {"preguntas":["olvide mi pw",
+                    "recuperarpw",
+                    "olvide mi clave",
+                    "olvide mi contrase",
+                    "como recupero mi pw",
+                    "como recupero mi contrase",
+                    "como recuperar mi pw",
+                    "recuperar pw",
+                    "recuperar contrase",
+                    "recuperar passw",
+                    "recuperar mi contrase",
+                    "recuperar mi pw"]},
+                {"respuestas":[]}
+                
+            ],
+
+           
+            "zerkquest":[
+                {"preguntas":["questzerk",
+                    "Knight"
+                    
+                    
+                    ]},
+                {"respuestas":[]}
+                
+            ],
+            
+            "QuestOrb":[
+                {"preguntas":["questorb"
+                    
+                    ]},
+                {"respuestas":[]}
+                
+            ],
+
+            "SetLGDG14":[
+                {"preguntas":["setlgdg14"
+                    
+                    ]},
+                {"respuestas":[]}
+                
+            ],
+
+            "SetMythDG15":[
+                {"preguntas":["setmytdg15"
+                    
+                    ]},
+                {"respuestas":[]}
+                
+            ],
+
+            "Zerk130":[
+                {"preguntas":["zerk130",
+                "quest vice general lord",
+                    "quest marquis"
+                    ]},
+                {"respuestas":[]}
+                
+            ],
+            
+            "ArmaLGDG14":[
+                {"preguntas":["armalgdg14"
+                    
+                    ]},
+                {"respuestas":[]}
+                
+            ],
+
+            "QuestPhanton":[
+                {"preguntas":["phanton"
+                    
+                    ]},
+                {"respuestas":[]}
+                
+            ],
+            
+            "ArmaLGDG13":[
+                {"preguntas":["armalgdg13"
+                    
+                    ]},
+                {"respuestas":[]}
+                
+            ],
+
+            "QuestFlamingTree":[
+                {"preguntas":["flamingtree"
+                    
+                    ]},
+                {"respuestas":[]}
+                
+            ],
+
+            "QuestTogui":[
+                {"preguntas":["setlgdg13"
+                    
+                    ]},
+                {"respuestas":[]}
+                
+            ],
+
+            "ArmaLGDG15":[
+                {"preguntas":["armalgdg15"
+                    
+                    ]},
+                {"respuestas":[]}
+                
+            ],
+
+            "comandos":[
+                {"cmd":["**`!clienterror  `** - Solucion de problema con el cliente \n",
+                    "**`!RecuperarID  `** - Forma de recuperar la ID \n",
+                    "**`!RecuperarPW  `** - Forma de recuperar la contraseña \n",
+                    "**`!RecuperarRS  `** - Forma de recuperar la Clave secreta \n",
+                    "**`!QuestZerk    `** - Guía de zerk azul \n",
+                    "**`!Zerk130      `** - Guía de título Marquis & Vice General Lord \n",
+                    "**`!QuestOrb     `** - Obtencion de**Orb** para el arma dg14 LG \n",
+                    "**`!ArmaLGDG13   `** - Guía de Arma Legend DG13\n",
+                    "**`!SetLGDG13    `** - Guía de equipamiento Legend DG13\n",
+                    "**`!ArmaLGDG14   `** - Guía de Arma Legend DG14 \n",
+                    "**`!SetLGDG14    `** - Guía de equipamiento Legend DG14 \n",
+                    "**`!Phanton      `** - Guía de misiones en Phantom Desert\n",
+                    "**`!FlamingTree  `** - Guía de misiones en Flaming Tree \n",
+                    "**`!SetMytDG15   `** - Guía de equipamiento Mítico DG15 \n",
+                    "**`!ArmaLGDG15   `** - Guía de Arma Legend DG15 \n"
+
+                    ]}
+              
+                
+            ],
+
+
+
+            "RcupeesserarPW":[
+                {"preguntas":[]},
+                {"respuestas":[]}
+                
+            ]
+
+
+,             "empty": [
+            {"preguntas":[" "]},
+            {"respuestas":["Necesito más informacion para poder ayudarle con algo", "¿?", "¿Disculpe?"]}              
+            ]
+        }
+    }

@@ -1,7 +1,7 @@
 module.exports = {
 	name: "reaccionroles",
-	description: "Reacciones en un embed!",
-  async	execute(Discord, client, message, Embed) {
+	description: "Reacciones en embed!",
+  async	execute(Discord, client, message, Embed, ChannelIDs) {
 
 	
 function emoji (id) {
@@ -9,53 +9,78 @@ function emoji (id) {
 }
 
 	const ThiefRole = message.guild.roles.cache.find(role => role.name === "Thief");
-	const parerole = message.guild.roles.cache.find(role => role.name === "Thief");
-	const thiefEmoji= emoji('798055358044176414');
-	const thiefEmoji1= ('798055358044176414');
-	const pare = ('🛑');
+	const HunterRole = message.guild.roles.cache.find(role => role.name === "Hunter");
+	const TraderRole = message.guild.roles.cache.find(role => role.name === "Trader");
+	
+	const thiefEmoji= ('798055358044176414');
+	const hunterEmoji= ('798055357863297024');
+	const traderEmoji= ('798055358207229962');
 	
 	Embed
 	.setColor('RANDOM')
 	.setTitle('Selecciona un color\n')
 	.setThumbnail("https://i.imgur.com/7bh8ur3.png")
-	.setDescription(`${thiefEmoji} Click en la reacción para aignar alguno de estos roles`);
+	.setDescription(`Click en la reacción para aignar alguno de estos roles`);
 	
 	let messageEmbed = await message.channel.send(Embed);
 	messageEmbed.react(thiefEmoji);
-	messageEmbed.react(pare);
+	messageEmbed.react(hunterEmoji);
+	messageEmbed.react(traderEmoji);
+	
+
+	Embed
+	.setColor('RANDOM')
+	.setTitle('Selecciona un color\n')
+	.setThumbnail("https://i.imgur.com/7bh8ur3.png")
+	.setDescription(`Click en la reacción para aignar alguno de estos roles`);
+	
+	let messageEmbed1 = await message.channel.send(Embed);
+	messageEmbed.react(thiefEmoji);
+
+
 	
 
 	client.on('messageReactionAdd', async (reaction, user) =>{
-		
-		if(reaction.message.partial) await reaction.message.fetch();
-		if(reaction.partial) await reaction.fetch();
 		if(user.bot) return;
 		if(!reaction.message.guild) return;
+		if(reaction.message.channel.id==ChannelIDs.RolesChannelID){
 
-		if(reaction.emoji.id === thiefEmoji1){
-			console.log("added");
+		if(reaction.emoji.id === thiefEmoji){
+
+			await reaction.message.guild.members.cache.get(user.id).roles.remove();
 			await reaction.message.guild.members.cache.get(user.id).roles.add(ThiefRole);
-		console.log("added");
+		
+		} else if (reaction.emoji.id === hunterEmoji){
+			await reaction.message.guild.members.cache.get(user.id).roles.add(HunterRole);
 		}
-		 else {return;}
+		else if (reaction.emoji.id === traderEmoji){
+			await reaction.message.guild.members.cache.get(user.id).roles.add(TraderRole);
+		}
+		 else 
+		 {return;}
+		}
 
 	});
 
 	
 	client.on('messageReactionRemove', async (reaction, user) =>{
 		
-		if(reaction.message.partial) await reaction.message.fetch();
-		if(reaction.partial) await reaction.fetch();
 		if(user.bot) return;
 		if(!reaction.message.guild) return;
+		if(reaction.message.channel.id==ChannelIDs.RolesChannelID){
 
-		if(reaction.emoji.id === thiefEmoji1){
-			console.log("added");
+		if(reaction.emoji.id === thiefEmoji){
 			await reaction.message.guild.members.cache.get(user.id).roles.remove(ThiefRole);
-		console.log("added");
 		}
-		 else {return;}
+	 else if (reaction.emoji.id === hunterEmoji){
+		await reaction.message.guild.members.cache.get(user.id).roles.remove(HunterRole);
+	}
+	else if (reaction.emoji.id === traderEmoji){
+		await reaction.message.guild.members.cache.get(user.id).roles.remove(TraderRole);
+	}
 
+	else{ return;}
+}
 	});
 
 

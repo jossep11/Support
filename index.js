@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const fs = require('fs');
 const config = require("../token/config.json");
 const path = require("./data.json");
+const ChannelIDs = require("./commands/ChannelIDs.json");
 
 
 const client = new Discord.Client();
@@ -15,16 +16,13 @@ for (const file of commandFiles) {
 	client.commands.set(command.name, command);
 }
 
-
 function emoji (id) {
     return client.emojis.cache.get(id).toString();
 }
 
-
 client.once('ready', () => {
     console.log(`Bot activo como ${client.user.tag}!`);
 });
-
 
 
 client.on('message', async message =>{
@@ -33,9 +31,9 @@ client.on('message', async message =>{
     const contentss = args.toLowerCase(); 
     if(message.author.bot) return;   
 
- if(message.channel.id=='780997047418880002' || message.channel.type==='dm'){
+ if(message.channel.id==ChannelIDs.TestChannelID || message.channel.type==='dm'){
     client.commands.get('Words').execute(message, args, contentss, Embed, client, Discord);
-    if (message.channel.id=='780997047418880002'){
+    if (message.channel.id==ChannelIDs.TestChannelID){
         message.delete({ timeout: 1000 })//elimina el mensaje    
     } 
     
@@ -56,18 +54,14 @@ client.on('message', async message =>{
 
 					message.channel.send(Embed);
     }
-
-    if(message.content==='mono'){
-        message.channel.send(emoji("797855850660233277"));
-        message.react('797855850660233277');
-    }
-
  }   
 
-
- client.commands.get('reaccionroles').execute(Discord, client, message, Embed);
  
+ if(contentss==='reactionroles' && message.author.id == ChannelIDs.JossepID){
+    
+    client.commands.get('reaccionroles').execute(Discord, client, message, Embed, ChannelIDs);
 
+}
  
 
 

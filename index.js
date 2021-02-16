@@ -3,8 +3,6 @@ const fs = require('fs');
 const config = require("../token/config.json");
 const path = require("./data.json");
 const ChannelIDs = require("./commands/ChannelIDs.json");
-
-
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
@@ -19,6 +17,9 @@ for (const file of commandFiles) {
 function emoji (id) {
     return client.emojis.cache.get(id).toString();
 }
+
+
+
 
 client.once('ready', () => {
     console.log(`Bot activo como ${client.user.tag}!`);
@@ -59,10 +60,14 @@ client.on('message', async message =>{
  
  if(contentss==='reactionroles' && message.author.id == ChannelIDs.JossepID){
     
-    client.commands.get('reaccionroles').execute(Discord, client, message, Embed, ChannelIDs);
+    client.commands.get('reaccionroles').execute(client, message, Embed, ChannelIDs);
 
 }
- 
+
+
+
+
+
 
 
 

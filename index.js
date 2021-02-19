@@ -5,6 +5,7 @@ const path = require("./data.json");
 const ChannelIDs = require("./commands/ChannelIDs.json");
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
+let cooldown =new Set();
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
@@ -60,7 +61,7 @@ client.on('message', async message =>{
  
  if(contentss==='reactionroles' && message.author.id == ChannelIDs.JossepID){
     
-    client.commands.get('reaccionroles').execute(client, message, Embed, ChannelIDs);
+    client.commands.get('reaccionroles').execute(client, message, Embed, ChannelIDs, cooldown);
 
 }
 

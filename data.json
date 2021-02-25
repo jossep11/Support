@@ -94,7 +94,7 @@
                 {"preguntas":["setlgdg14"
                     
                     ]},
-                {"respuestas":[]}
+                {"respuestas":["Para la obtención del set D14 Legend en silkroad latino servers deben de conseguir ciertos items que son necesarios para la obtención del mismo dichos items se mostraran a continuación y la guía respectiva para la obtención de el Set D14 sin mas que decir esperamos que esta guía sea de su agrado y entendimiento para que puedas disfrutar de nuestro servidor placenteramente."]}
                 
             ],
 
@@ -102,7 +102,7 @@
                 {"preguntas":["setmytdg15"
                     
                     ]},
-                {"respuestas":[]}
+                {"respuestas":["Para la obtención del set D15 Mythical en silkroad latino server deben de conseguir ciertos items que son necesarios para la obtención del mismo, dichos items se mostraran a continuación y la guía respectiva para la obtención de el Set D15."]}
                 
             ],
 
@@ -123,11 +123,9 @@
                 
             ],
 
-            "QuestPhanton":[
-                {"preguntas":["phanton"
-                    
-                    ]},
-                {"respuestas":[]}
+            "QuestPhantom":[
+                {"preguntas":["phantom"]},
+                {"respuestas":["Esta Guía pertenece a la serie de quest necesarias para la obtención del Arma Legend D15"]}
                 
             ],
             
@@ -143,7 +141,7 @@
                 {"preguntas":["flamingtree"
                     
                     ]},
-                {"respuestas":[]}
+                {"respuestas":["Esta Guía pertenece a la serie de quest necesarias para la obtención del Arma Legend D15"]}
                 
             ],
 
@@ -153,11 +151,19 @@
                 
             ],
 
+            "TalismanesMythD15":[
+                {"preguntas":["talisd15"
+                    
+                    ]},
+                {"respuestas":["1- Animal Spirit \n2- Destiny Flame \n3- Fenix Heart \n 4- Fist Of Fire \n5- Mythical Flower \n6- Horror Skull \n7- Spirit Fire Sword \n8- Shield Of Valor"]}
+                
+            ],
+
             "ArmaLGDG15":[
                 {"preguntas":["armalgdg15"
                     
                     ]},
-                {"respuestas":[]}
+                {"respuestas":["Para poder obtener la codiciada arma Legendary primero deberás obtener el arma Mythical. Para conseguir el arma Mythical deberás completar una nueva flameante serie de colección de talismanes de FGW."]}
                 
             ],
 
@@ -170,9 +176,9 @@
                     "**`!RecuperarRS  `** - Forma de recuperar la Clave secreta \n",
                     "**`!QuestZerk    `** - Guía de zerk azul \n",
                     "**`!Zerk120      `** - Guía de título Marquis & Vice General Lord \n",
-                    "**`!QuestOrb     `** - Obtencion de**Orb** para el arma dg14 LG \n",
                     "**`!ArmaLGDG13   `** - Guía de Arma Legend DG13\n",
                     "**`!SetLGDG13    `** - Guía de equipamiento Legend DG13\n",
+                    "**`!ArmaLGDG14   `** - Guía de Arma Legend DG14 \n",
                     "Para ver el resto de comandos a los cuales respondo por favor escriba  **` !ayuda `** \n"]}],                
 
                    
@@ -183,17 +189,17 @@
                     "**`!RecuperarRS  `** - Forma de recuperar la Clave secreta \n",
                     "**`!QuestZerk    `** - Guía de zerk azul \n",
                     "**`!Zerk120      `** - Guía de título Marquis & Vice General Lord \n",
-                    "**`!QuestOrb     `** - Obtencion de**Orb** para el arma dg14 LG \n",
-                    "**`!ArmaLGDG13   `** - Guía de Arma Legend DG13\n"]},
-            
+                    "**`!ArmaLGDG13   `** - Guía de Arma Legend DG13\n",
+                    "**`!SetLGDG13    `** - Guía de equipamiento Legend DG13\n"]},
             {"Support_Priviate_Esp1":
-                [   "**`!SetLGDG13    `** - Guía de equipamiento Legend DG13\n",
-                    "**`!ArmaLGDG14   `** - Guía de Arma Legend DG14 \n",
+                [   "**`!ArmaLGDG14   `** - Guía de Arma Legend DG14 \n",
+                    "**`!QuestOrb     `** - Obtencion de**Orb** para el arma dg14 LG \n",
                     "**`!SetLGDG14    `** - Guía de equipamiento Legend DG14 \n",
-                    "**`!Phanton      `** - Guía de misiones en Phantom Desert\n",
-                    "**`!FlamingTree  `** - Guía de misiones en Flaming Tree \n",
-                    "**`!SetMytDG15   `** - Guía de equipamiento Mítico DG15 \n",
-                    "**`!ArmaLGDG15   `** - Guía de Arma Legend DG15 \n"   ]}],
+                    "**`!TalisD15     `** - Nombre de talismanes de la colección del arma de mythical degree 15\n",
+                    "**`!ArmaLGDG15   `** - Guía de Arma Legend DG15 \n",
+                    "**`!Phantom      `** - Extensión de quest para la obtención del Arma Leged D15 en Phantom Desert\n",
+                    "**`!FlamingTree  `** - Extensión de quest para la obtención del Arma Leged D15 en Flaming Tree \n",
+                    "**`!SetMytDG15   `** - Guía de equipamiento Mítico DG15 \n"]}],
 
 
             "RcupeesserarPW":[

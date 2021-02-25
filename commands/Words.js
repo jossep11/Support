@@ -17,7 +17,12 @@ module.exports = {
         ArmaLGDG13();
         ArmaLGDG14();
         QuestTogui();
-
+        SetLGDG14();
+        Phantom();
+        TalismanesMythD15();
+        ArmaLGDG15();
+        QuestFlamingTree();
+        SetMythDG15();
 
         //Saludos
         function Saludos() {
@@ -269,107 +274,20 @@ function QuestTogui(){
     
 }
 
-function QuestOrb(){
+function SetLGDG14(){
 
-    let QuestOrb = palabras.QuestOrb;
-    let preguntas = QuestOrb[0].preguntas;
-  
+    let SetLGDG14 = palabras.SetLGDG14;
+    let preguntas = SetLGDG14[0].preguntas;
+    let respuestas = SetLGDG14[1].respuestas;
+
     for (let q = 0; q <= preguntas.length; q++) {
         if (contentss.includes(preguntas[q])) {
             Embed
             .setColor('#0099ff')
-            .setTitle('Obtencion del Weapon/Shield Orb')
-            .setDescription('Orb de arma legend DG14')
+            .setTitle('[Guía] Set Legend D14')
+            .setDescription(respuestas)
             .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
-            .setURL('https://bit.ly/3pZJlwM')           
-            .setTimestamp()
-            message.author.send(Embed);
-           }
-    }
-
-
-    
-}
-
-function QuestOrb(){
-
-    let QuestOrb = palabras.QuestOrb;
-    let preguntas = QuestOrb[0].preguntas;
-  
-    for (let q = 0; q <= preguntas.length; q++) {
-        if (contentss.includes(preguntas[q])) {
-            Embed
-            .setColor('#0099ff')
-            .setTitle('Obtencion del Weapon/Shield Orb')
-            .setDescription('Orb de arma legend DG14')
-            .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
-            .setURL('https://bit.ly/3pZJlwM')           
-            .setTimestamp()
-            message.author.send(Embed);
-           }
-    }
-
-
-    
-}
-
-function QuestOrb(){
-
-    let QuestOrb = palabras.QuestOrb;
-    let preguntas = QuestOrb[0].preguntas;
-  
-    for (let q = 0; q <= preguntas.length; q++) {
-        if (contentss.includes(preguntas[q])) {
-            Embed
-            .setColor('#0099ff')
-            .setTitle('Obtencion del Weapon/Shield Orb')
-            .setDescription('Orb de arma legend DG14')
-            .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
-            .setURL('https://bit.ly/3pZJlwM')           
-            .setTimestamp()
-            message.author.send(Embed);
-           }
-    }
-
-
-    
-}
-
-function QuestOrb(){
-
-    let QuestOrb = palabras.QuestOrb;
-    let preguntas = QuestOrb[0].preguntas;
-  
-    for (let q = 0; q <= preguntas.length; q++) {
-        if (contentss.includes(preguntas[q])) {
-            Embed
-            .setColor('#0099ff')
-            .setTitle('Obtencion del Weapon/Shield Orb')
-            .setDescription('Orb de arma legend DG14')
-            .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
-            .setURL('https://bit.ly/3pZJlwM')           
-            .setTimestamp()
-            message.author.send(Embed);
-           }
-    }
-
-
-    
-}
-
-function QuestOrb(){
-
-    let QuestOrb = palabras.QuestOrb;
-    let preguntas = QuestOrb[0].preguntas;
-  
-    for (let q = 0; q <= preguntas.length; q++) {
-        if (contentss.includes(preguntas[q])) {
-            Embed
-            .setColor('#0099ff')
-            .setTitle('Obtencion del Weapon/Shield Orb')
-            .setDescription('Orb de arma legend DG14')
-            .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
-            .setURL('https://bit.ly/3pZJlwM')           
+            .setURL('http://bit.ly/3dMqlPy')           
             .setTimestamp()
             message.author.send(Embed);
            }
@@ -380,6 +298,123 @@ function QuestOrb(){
 }
 
 
+
+function Phantom(){
+
+    let Phantom = palabras.QuestPhantom;
+    let preguntas = Phantom[0].preguntas;
+    let respuestas = Phantom[1].respuestas;
+  
+    for (let q = 0; q <= preguntas.length; q++) {
+        if (contentss.includes(preguntas[q])) {
+            Embed
+            .setColor('#0099ff')
+            .setTitle('[Guía] Phantom Desert')
+            .setDescription(respuestas)
+            .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
+            .setURL('https://bit.ly/3bvD48p')    
+            .setImage('https://sro-latino.com/proxy.php?image=http%3A%2F%2Fsro-latino.com%2Fwp-content%2Fuploads%2F2017%2F10%2F11.png&hash=5231432ec0d8f8d6f9a6120086934169')       
+            .setTimestamp()
+            message.author.send(Embed);
+           }
+    }
+
+
+        
+}
+
+function ArmaLGDG15(){
+
+    let ArmaLGDG15 = palabras.ArmaLGDG15;
+    let preguntas = ArmaLGDG15[0].preguntas;
+    let respuestas = ArmaLGDG15[1].respuestas;
+  
+    for (let q = 0; q <= preguntas.length; q++) {
+        if (contentss.includes(preguntas[q])) {
+            Embed
+            .setColor('#0099ff')
+            .setTitle('[Guía] Armas Degree 15 Legendary')
+            .setDescription(respuestas)
+            .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
+            .setURL('https://bit.ly/3nsUFjl') 
+            .setImage('https://i.imgur.com/4r81mbW.png')     
+            .setImage     
+            .setTimestamp()
+            message.author.send(Embed);
+           }
+    }
+
+
+        
+}
+
+
+function TalismanesMythD15(){
+
+    let TalismanesMythD15 = palabras.TalismanesMythD15;
+    let preguntas = TalismanesMythD15[0].preguntas;
+    let respuestas = TalismanesMythD15[1].respuestas;
+
+    for (let q = 0; q <= preguntas.length; q++) {
+        if (contentss.includes(preguntas[q])) {
+            Embed
+            .setColor('#0099ff')
+            .setTitle('Nombre de talismanes degree 15')
+            .setDescription(respuestas)
+            .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
+            .setImage('https://sro-latino.com/wp-content/uploads/2017/10/6.png')       
+            .setTimestamp()
+            message.author.send(Embed);
+           }
+    }
+
+
+    
+}
+
+function QuestFlamingTree(){
+
+    let QuestFlamingTree = palabras.QuestFlamingTree;
+    let preguntas = QuestFlamingTree[0].preguntas;
+    let respuestas = QuestFlamingTree[1].respuestas;    
+
+    for (let q = 0; q <= preguntas.length; q++) {
+        if (contentss.includes(preguntas[q])) {
+            Embed
+            .setColor('#0099ff')
+            .setTitle('[Quest] Flaming Tree')
+            .setDescription(respuestas)
+            .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
+            .setURL('https://bit.ly/3q6jymG')   
+            .setImage('https://sro-latino.com/proxy.php?image=http%3A%2F%2Fsro-latino.com%2Fwp-content%2Fuploads%2F2017%2F10%2F4.png&hash=b2f9f624cc3c931166640a217cac0a07')        
+            .setTimestamp()
+            message.author.send(Embed);
+           }
+    }
+    
+}
+
+function SetMythDG15(){
+
+    let SetMythDG15 = palabras.SetMythDG15;
+    let preguntas = SetMythDG15[0].preguntas;
+    let respuestas = SetMythDG15[1].respuestas;    
+
+    for (let q = 0; q <= preguntas.length; q++) {
+        if (contentss.includes(preguntas[q])) {
+            Embed
+            .setColor('#0099ff')
+            .setTitle('[Guía] Set Mythical Degree 15')
+            .setDescription(respuestas)
+            .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
+            .setURL('http://bit.ly/3qPOgkV')   
+            .setImage('https://sro-latino.com/proxy.php?image=http%3A%2F%2Fsro-latino.com%2Fwp-content%2Fuploads%2F2017%2F10%2F8.png&hash=db9c5b5fee0b658f7f4b0504e2696233')        
+            .setTimestamp()
+            message.author.send(Embed);
+           }
+    }
+    
+}
     
     
     

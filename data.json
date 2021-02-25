@@ -74,22 +74,19 @@
                 
             ],
 
-           
+                   
             "zerkquest":[
                 {"preguntas":["questzerk",
-                    "Knight"
-                    
-                    
-                    ]},
+                    "Knight"]},
+
                 {"respuestas":[]}
                 
             ],
             
             "QuestOrb":[
-                {"preguntas":["questorb"
-                    
-                    ]},
-                {"respuestas":[]}
+                {"preguntas":["questorb"]},
+
+                {"respuestas":["En silkroad latino servers para obtener el arma D14 Legend es necesario tener un item especial llamado Weapon o Shield Orb en esta guia que se presenta acontinuacion podran encontrar los pasos y las quest necesarias para la obtencion del mismo para poder crear su arma D14 en nuestro servidor."]}
                 
             ],
 
@@ -109,12 +106,12 @@
                 
             ],
 
-            "Zerk130":[
-                {"preguntas":["zerk130",
+            "Zerk120":[
+                {"preguntas":["zerk120",
                 "quest vice general lord",
                     "quest marquis"
                     ]},
-                {"respuestas":[]}
+                {"respuestas":["Siguiendo los pasos dentro de la guía, podra completar su quest para obtener este titulo"]}
                 
             ],
             
@@ -122,7 +119,7 @@
                 {"preguntas":["armalgdg14"
                     
                     ]},
-                {"respuestas":[]}
+                {"respuestas":["En Silkroad Latino contamos con el maravilloso sistema de armas legendarias, de las cuales podrás disfrutar al completar la quest"]}
                 
             ],
 
@@ -138,7 +135,7 @@
                 {"preguntas":["armalgdg13"
                     
                     ]},
-                {"respuestas":[]}
+                {"respuestas":["En Silkroad Latino contamos con el maravilloso sistema de armas legendarias, las cuales podrás disfrutar desde Lv. 116, únete a esta maravillosa experiencia coleccionando los talismanes para crear tu arma legendaria DG 13, con un diseño único y un asombroso resplandor, con el cual impactarás y deslumbrarás, podrás disfrutar de esta travesía como coleccionista de talismanes a partir de Lv. 111, momento desde el cual podrás ingresar al nuevo mapa a la busca de tan importantes objetos para mejorar y divertirte."]}
                 
             ],
 
@@ -151,10 +148,8 @@
             ],
 
             "QuestTogui":[
-                {"preguntas":["setlgdg13"
-                    
-                    ]},
-                {"respuestas":[]}
+                {"preguntas":["setlgdg13"]},
+                {"respuestas":["En silkroad latino servers para obtener el Set D13 Legend es necesario hacer una serie de quest que llevan una historia muy apsionada en la cual pueden sumergirse"]}
                 
             ],
 
@@ -167,27 +162,38 @@
             ],
 
             "comandos":[
-                {"cmd":["**`!clienterror  `** - Solucion de problema con el cliente \n",
+                {"Support_C_Esp":[
+                    "Saludos!, este es el chatbot del Silkroad Latino, a contuniacion tienes convionaciones de palabras claves a las cuales nuestro chatbot responde \n\n",
+                    "**`!clienterror  `** - Solucion de problema con el cliente \n",
                     "**`!RecuperarID  `** - Forma de recuperar la ID \n",
                     "**`!RecuperarPW  `** - Forma de recuperar la contraseña \n",
                     "**`!RecuperarRS  `** - Forma de recuperar la Clave secreta \n",
                     "**`!QuestZerk    `** - Guía de zerk azul \n",
-                    "**`!Zerk130      `** - Guía de título Marquis & Vice General Lord \n",
+                    "**`!Zerk120      `** - Guía de título Marquis & Vice General Lord \n",
                     "**`!QuestOrb     `** - Obtencion de**Orb** para el arma dg14 LG \n",
                     "**`!ArmaLGDG13   `** - Guía de Arma Legend DG13\n",
                     "**`!SetLGDG13    `** - Guía de equipamiento Legend DG13\n",
+                    "Para ver el resto de comandos a los cuales respondo por favor escriba  **` !ayuda `** \n"]}],                
+
+                   
+            "ayuda":[
+                {"Support_Priviate_Esp0":["**`!clienterror  `** - Solucion de problema con el cliente \n",
+                    "**`!RecuperarID  `** - Forma de recuperar la ID \n",
+                    "**`!RecuperarPW  `** - Forma de recuperar la contraseña \n",
+                    "**`!RecuperarRS  `** - Forma de recuperar la Clave secreta \n",
+                    "**`!QuestZerk    `** - Guía de zerk azul \n",
+                    "**`!Zerk120      `** - Guía de título Marquis & Vice General Lord \n",
+                    "**`!QuestOrb     `** - Obtencion de**Orb** para el arma dg14 LG \n",
+                    "**`!ArmaLGDG13   `** - Guía de Arma Legend DG13\n"]},
+            
+            {"Support_Priviate_Esp1":
+                [   "**`!SetLGDG13    `** - Guía de equipamiento Legend DG13\n",
                     "**`!ArmaLGDG14   `** - Guía de Arma Legend DG14 \n",
                     "**`!SetLGDG14    `** - Guía de equipamiento Legend DG14 \n",
                     "**`!Phanton      `** - Guía de misiones en Phantom Desert\n",
                     "**`!FlamingTree  `** - Guía de misiones en Flaming Tree \n",
                     "**`!SetMytDG15   `** - Guía de equipamiento Mítico DG15 \n",
-                    "**`!ArmaLGDG15   `** - Guía de Arma Legend DG15 \n"
-
-                    ]}
-              
-                
-            ],
-
+                    "**`!ArmaLGDG15   `** - Guía de Arma Legend DG15 \n"   ]}],
 
 
             "RcupeesserarPW":[
@@ -202,4 +208,7 @@
             {"respuestas":["Necesito más informacion para poder ayudarle con algo", "¿?", "¿Disculpe?"]}              
             ]
         }
+    
+    
     }
+

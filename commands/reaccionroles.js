@@ -2,7 +2,6 @@ module.exports = {
 	name: "reaccionroles",
 	description: "Reacciones en embed!",
   async	execute(client, message, Embed, ChannelIDs,cooldown) {
-
 	
 
 	
@@ -46,37 +45,45 @@ let CRoles= ChannelIDs.CountryRoles;
 	const traderEmoji= ('798055358207229962');
 	
 
-	Embed
-	.setColor('RANDOM')
-	.setTitle('Selecciona un color\n')
-	.setThumbnail("https://i.imgur.com/7bh8ur3.png")
-	.setDescription(`Click en la reacción para aignar alguno de estos roles`);
-	
-	let messageEmbed = await message.channel.send(Embed);
-	messageEmbed.react(thiefEmoji);
-	messageEmbed.react(hunterEmoji);
-	messageEmbed.react(traderEmoji);
-	
-	Embed
+	const channel1 = await client.channels.fetch('812427165995892746')
+  
+     channel1.messages.fetch().then(async (messages) =>  {
+      if (messages.size < 2) {
+        // Send a new message
 
-	.setDescription(`Click en la reacción para aignar alguno de estos roles`);
-	
-	let messageEmbed1 = await message.channel.send(Embed);
-	for (let q = 0; q < CEmoji.length; q++) {
-		messageEmbed1.react(CEmoji[q]);
-	
-	}//resto de roles
-	
+			Embed
+			.setColor('RANDOM')
+			.setTitle('Selecciona un color\n')
+			.setThumbnail("https://i.imgur.com/7bh8ur3.png")
+			.setDescription(`Click en la reacción para aignar alguno de estos roles`);
+			
+			let messageEmbed = await message.channel.send(Embed);
+			messageEmbed.react(thiefEmoji);
+			messageEmbed.react(hunterEmoji);
+			messageEmbed.react(traderEmoji);
+			
+			Embed
+
+			.setDescription(`Click en la reacción para aignar alguno de estos roles`);
+			
+			let messageEmbed1 = await message.channel.send(Embed);
+			for (let q = 0; q < CEmoji.length; q++) {
+				messageEmbed1.react(CEmoji[q]);
+			
+	}      
+     }
+    })
 
 
-
+	//resto de roles
+	
+	
 	/*  if (!message.member.roles.cache.has('798056003010035712')) {
 		return message.reply('can not use this command')
 	};
 **/
 
 	
-
 
 	client.on('messageReactionAdd', async (reaction, user) =>{
 	let Role_Code =reaction.message.guild.members.cache.get(user.id).roles.cache;

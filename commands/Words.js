@@ -14,7 +14,9 @@ module.exports = {
         zerkquest();       
         QuestOrb();
         Zerk130();
-
+        ArmaLGDG13();
+        ArmaLGDG14();
+        QuestTogui();
 
 
         //Saludos
@@ -138,8 +140,8 @@ function zerkquest(){
         if (contentss.includes(preguntas[q])) {
             Embed
             .setColor('#0099ff')
-            .setTitle('Zerk Quest')
-            .setDescription('**Quest de zerk Euro&Chine** \n\n lv 95 \n lv 100 \n lv 105 \n lv 110 \n lv 130')
+            .setTitle('Quest de zerk')
+            .setDescription('**Quest de zerk Euro&Chine** \n\n lv 95 \n lv 100 \n lv 105 \n lv 110')
             .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
             .setURL('http://bit.ly/3q5LGX6')           
             .setTimestamp()
@@ -153,17 +155,18 @@ function zerkquest(){
 
 function Zerk130(){
 
-    let Zerk130 = palabras.Zerk130;
-    let preguntas = Zerk130[0].preguntas;
+    let Zerk120 = palabras.Zerk120;
+    let preguntas = Zerk120[0].preguntas;
+    let respuesta = Zerk120[1].respuestas;
   
     for (let q = 0; q <= preguntas.length; q++) {
         if (contentss.includes(preguntas[q])) {
             Embed
             .setColor('#0099ff')
             .setTitle('Quest Titulo]Vice General Lord (Chinese) & Marquis (Europe)')
-            .setDescription('')
+            .setDescription(respuesta)
             .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
-            .setURL('http://bit.ly/3q5LGX6')           
+            .setURL('http://bit.ly/3bxE1v8')           
             .setTimestamp()
             message.author.send(Embed);
            }
@@ -177,13 +180,14 @@ function QuestOrb(){
 
     let QuestOrb = palabras.QuestOrb;
     let preguntas = QuestOrb[0].preguntas;
+    let respuesta = QuestOrb[1].respuestas;
   
     for (let q = 0; q <= preguntas.length; q++) {
         if (contentss.includes(preguntas[q])) {
             Embed
             .setColor('#0099ff')
             .setTitle('Obtencion del Weapon/Shield Orb')
-            .setDescription('Orb de arma legend DG14')
+            .setDescription(respuesta)
             .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
             .setURL('https://bit.ly/3pZJlwM')           
             .setTimestamp()
@@ -199,15 +203,16 @@ function ArmaLGDG14(){
 
     let ArmaLGDG14 = palabras.ArmaLGDG14;
     let preguntas = ArmaLGDG14[0].preguntas;
+    let respuesta = ArmaLGDG14[1].respuestas;
   
     for (let q = 0; q <= preguntas.length; q++) {
         if (contentss.includes(preguntas[q])) {
             Embed
             .setColor('#0099ff')
             .setTitle('Guía Armas Degree 14 Legendary')
-            .setDescription('Orb de arma legend DG14')
+            .setDescription(respuesta)
             .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
-            .setURL('https://bit.ly/3pZJlwM')           
+            .setURL('https://bit.ly/39lke0X')           
             .setTimestamp()
             message.author.send(Embed);
            }
@@ -217,19 +222,21 @@ function ArmaLGDG14(){
     
 }
 
-function QuestOrb(){
 
-    let QuestOrb = palabras.QuestOrb;
-    let preguntas = QuestOrb[0].preguntas;
+function ArmaLGDG13(){
+
+    let ArmaLGDG13 = palabras.ArmaLGDG13;
+    let preguntas = ArmaLGDG13[0].preguntas;
+    let respuestas= ArmaLGDG13[1].respuestas;
   
     for (let q = 0; q <= preguntas.length; q++) {
         if (contentss.includes(preguntas[q])) {
             Embed
             .setColor('#0099ff')
-            .setTitle('Obtencion del Weapon/Shield Orb')
-            .setDescription('Orb de arma legend DG14')
+            .setTitle('Quest Arma D13 Legend')
+            .setDescription(respuestas)
             .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
-            .setURL('https://bit.ly/3pZJlwM')           
+            .setURL('https://bit.ly/3nvkDTw')           
             .setTimestamp()
             message.author.send(Embed);
            }
@@ -239,19 +246,20 @@ function QuestOrb(){
     
 }
 
-function QuestOrb(){
+function QuestTogui(){
 
-    let QuestOrb = palabras.QuestOrb;
-    let preguntas = QuestOrb[0].preguntas;
-  
+    let QuestTogui = palabras.QuestTogui;
+    let preguntas = QuestTogui[0].preguntas;
+    let respuestas = QuestTogui[1].respuestas;
+
     for (let q = 0; q <= preguntas.length; q++) {
         if (contentss.includes(preguntas[q])) {
             Embed
             .setColor('#0099ff')
-            .setTitle('Obtencion del Weapon/Shield Orb')
-            .setDescription('Orb de arma legend DG14')
+            .setTitle('Togui Village Set Legendary D13')
+            .setDescription(respuestas)
             .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
-            .setURL('https://bit.ly/3pZJlwM')           
+            .setURL('https://bit.ly/2XsyQWE')           
             .setTimestamp()
             message.author.send(Embed);
            }

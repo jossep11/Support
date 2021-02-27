@@ -7,6 +7,7 @@ const ChannelIDs = require("./commands/ChannelIDs.json");
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 let cooldown =new Set();
+token= ChannelIDs.token;
 //const test = require ("./test");
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
@@ -146,6 +147,6 @@ if(message.content.startsWith('!clear')){
 );
 
 
-client.login(ChannelIDs.token);
+client.login(token);
     
     

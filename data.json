@@ -40,7 +40,7 @@
                 "client se cierra",
                 "error con mi client",
                 "client se paro"]},
-            {"respuestas":["Puede solucionar este error siguiendo los pasos que estan en la guia, si el problema continúa, contacte a uno de los GM's"]}              
+            {"respuestas":["Puede solucionar este error siguiendo los pasos que estan en la guia, si el problema continúa, contacte algun GM's"]}              
             ],
 
             "RecuperarID":[
@@ -77,29 +77,29 @@
                    
             "zerkquest":[
                 {"preguntas":["questzerk",
-                    "Knight"]},
+                    "Knight", "baron", "baronet", "count"]},
 
                 {"respuestas":[]}
                 
             ],
             
             "QuestOrb":[
-                {"preguntas":["questorb"]},
+                {"preguntas":["questorb", "quest orb"]},
 
                 {"respuestas":["En silkroad latino servers para obtener el arma D14 Legend es necesario tener un item especial llamado Weapon o Shield Orb en esta guia que se presenta acontinuacion podran encontrar los pasos y las quest necesarias para la obtencion del mismo para poder crear su arma D14 en nuestro servidor."]}
                 
             ],
 
             "SetLGDG14":[
-                {"preguntas":["setlgdg14"
+                {"preguntas":["setlgdg14", "setlgd14"
                     
                     ]},
-                {"respuestas":["Para la obtención del set D14 Legend en silkroad latino servers deben de conseguir ciertos items que son necesarios para la obtención del mismo dichos items se mostraran a continuación y la guía respectiva para la obtención de el Set D14 sin mas que decir esperamos que esta guía sea de su agrado y entendimiento para que puedas disfrutar de nuestro servidor placenteramente."]}
+                {"respuestas":["Para la obtención del set D14 Legend en silkroad latino servers deben de conseguir ciertos items que son necesarios para la obtención del mismo dichos items se mostraran a continuación y la guía respectiva para la obtención de el Set D14 "]}
                 
             ],
 
             "SetMythDG15":[
-                {"preguntas":["setmytdg15"
+                {"preguntas":["setmytdg15", "setmytd15"
                     
                     ]},
                 {"respuestas":["Para la obtención del set D15 Mythical en silkroad latino server deben de conseguir ciertos items que son necesarios para la obtención del mismo, dichos items se mostraran a continuación y la guía respectiva para la obtención de el Set D15."]}
@@ -111,12 +111,12 @@
                 "quest vice general lord",
                     "quest marquis"
                     ]},
-                {"respuestas":["Siguiendo los pasos dentro de la guía, podra completar su quest para obtener este titulo"]}
+                {"respuestas":["Esta quest pertenece a la serie de quest de los titulos Knight-Captain / Baronet-General – Baron-Senior General / Count-Chief General, para hacer esta quest necesitas previamente los titulos nombrados"]}
                 
             ],
             
             "ArmaLGDG14":[
-                {"preguntas":["armalgdg14"
+                {"preguntas":["armalgdg14", "armalgd14"
                     
                     ]},
                 {"respuestas":["En Silkroad Latino contamos con el maravilloso sistema de armas legendarias, de las cuales podrás disfrutar al completar la quest"]}
@@ -124,16 +124,16 @@
             ],
 
             "QuestPhantom":[
-                {"preguntas":["phantom"]},
+                {"preguntas":["phantom", "questphantom", "pahnton", "questphanton"]},
                 {"respuestas":["Esta Guía pertenece a la serie de quest necesarias para la obtención del Arma Legend D15"]}
                 
             ],
             
             "ArmaLGDG13":[
-                {"preguntas":["armalgdg13"
+                {"preguntas":["armalgdg13","armalgd13"
                     
                     ]},
-                {"respuestas":["En Silkroad Latino contamos con el maravilloso sistema de armas legendarias, las cuales podrás disfrutar desde Lv. 116, únete a esta maravillosa experiencia coleccionando los talismanes para crear tu arma legendaria DG 13, con un diseño único y un asombroso resplandor, con el cual impactarás y deslumbrarás, podrás disfrutar de esta travesía como coleccionista de talismanes a partir de Lv. 111, momento desde el cual podrás ingresar al nuevo mapa a la busca de tan importantes objetos para mejorar y divertirte."]}
+                {"respuestas":["En Silkroad Latino contamos con el maravilloso sistema de armas legendarias, las cuales podrás disfrutar desde Lv. 116, únete a esta maravillosa experiencia coleccionando los talismanes para crear tu arma legendaria DG 13"]}
                 
             ],
 
@@ -146,13 +146,13 @@
             ],
 
             "QuestTogui":[
-                {"preguntas":["setlgdg13"]},
+                {"preguntas":["setlgdg13", "setlgd13"]},
                 {"respuestas":["En silkroad latino servers para obtener el Set D13 Legend es necesario hacer una serie de quest que llevan una historia muy apsionada en la cual pueden sumergirse"]}
                 
             ],
 
             "TalismanesMythD15":[
-                {"preguntas":["talisd15"
+                {"preguntas":["talisd15", "talismanesdg15", "talisdg15", "talismanesd15"
                     
                     ]},
                 {"respuestas":["1- Animal Spirit \n2- Destiny Flame \n3- Fenix Heart \n 4- Fist Of Fire \n5- Mythical Flower \n6- Horror Skull \n7- Spirit Fire Sword \n8- Shield Of Valor"]}
@@ -160,7 +160,7 @@
             ],
 
             "ArmaLGDG15":[
-                {"preguntas":["armalgdg15"
+                {"preguntas":["armalgdg15", "armalgd15"
                     
                     ]},
                 {"respuestas":["Para poder obtener la codiciada arma Legendary primero deberás obtener el arma Mythical. Para conseguir el arma Mythical deberás completar una nueva flameante serie de colección de talismanes de FGW."]}

@@ -13,7 +13,7 @@ module.exports = {
         RecuperarID();
         zerkquest();       
         QuestOrb();
-        Zerk130();
+        Zerk120();
         ArmaLGDG13();
         ArmaLGDG14();
         QuestTogui();
@@ -80,6 +80,7 @@ function ClienteError() {
             .setDescription(respuestas)
             .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
             .setTimestamp()
+            .setImage('https://wiki.srolatino-servers.com/wp-content/uploads/2018/01/iOQ3O9C.jpg')
             .setFooter('Silkroad Latino');
 
             message.author.send(Embed);
@@ -148,7 +149,8 @@ function zerkquest(){
             .setTitle('Quest de zerk')
             .setDescription('**Quest de zerk Euro&Chine** \n\n lv 95 \n lv 100 \n lv 105 \n lv 110')
             .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
-            .setURL('http://bit.ly/3q5LGX6')           
+            .setURL('http://bit.ly/3q5LGX6') 
+            .setImage('https://i.imgur.com/Fh3Teqr.jpeg')          
             .setTimestamp()
             message.author.send(Embed);
            }
@@ -158,7 +160,7 @@ function zerkquest(){
     
 }
 
-function Zerk130(){
+function Zerk120(){
 
     let Zerk120 = palabras.Zerk120;
     let preguntas = Zerk120[0].preguntas;
@@ -171,6 +173,7 @@ function Zerk130(){
             .setTitle('Quest Titulo]Vice General Lord (Chinese) & Marquis (Europe)')
             .setDescription(respuesta)
             .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
+            .setImage('https://sro-latino.com/wp-content/uploads/2015/06/Soldier-Takia.png')
             .setURL('http://bit.ly/3bxE1v8')           
             .setTimestamp()
             message.author.send(Embed);
@@ -191,10 +194,11 @@ function QuestOrb(){
         if (contentss.includes(preguntas[q])) {
             Embed
             .setColor('#0099ff')
-            .setTitle('Obtencion del Weapon/Shield Orb')
+            .setTitle('[Guía] Obtencion del Weapon/Shield Orb')
             .setDescription(respuesta)
             .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
-            .setURL('https://bit.ly/3pZJlwM')           
+            .setURL('https://bit.ly/3pZJlwM')    
+            .setImage('https://sro-latino.com/wp-content/uploads/2015/06/wp-1.12.png')       
             .setTimestamp()
             message.author.send(Embed);
            }
@@ -214,10 +218,11 @@ function ArmaLGDG14(){
         if (contentss.includes(preguntas[q])) {
             Embed
             .setColor('#0099ff')
-            .setTitle('Guía Armas Degree 14 Legendary')
+            .setTitle('[Guía] Armas Degree 14 Legendary')
             .setDescription(respuesta)
             .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
-            .setURL('https://bit.ly/39lke0X')           
+            .setURL('https://bit.ly/39lke0X')   
+            .setImage('https://sro-latino.com/wp-content/uploads/2015/06/d14-1.4.jpg')            
             .setTimestamp()
             message.author.send(Embed);
            }
@@ -241,7 +246,8 @@ function ArmaLGDG13(){
             .setTitle('Quest Arma D13 Legend')
             .setDescription(respuestas)
             .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
-            .setURL('https://bit.ly/3nvkDTw')           
+            .setURL('https://bit.ly/3nvkDTw')  
+            .setImage('https://sro-latino.com/wp-content/uploads/2015/06/arma-lg-1.15.png')         
             .setTimestamp()
             message.author.send(Embed);
            }
@@ -261,11 +267,12 @@ function QuestTogui(){
         if (contentss.includes(preguntas[q])) {
             Embed
             .setColor('#0099ff')
-            .setTitle('Togui Village Set Legendary D13')
+            .setTitle('[Guía] Togui Village Set Legendary D13')
             .setDescription(respuestas)
             .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
             .setURL('https://bit.ly/2XsyQWE')           
             .setTimestamp()
+            .setImage('https://sro-latino.com/wp-content/uploads/2015/06/Quest-1-The-Package.jpg')
             message.author.send(Embed);
            }
     }
@@ -287,7 +294,8 @@ function SetLGDG14(){
             .setTitle('[Guía] Set Legend D14')
             .setDescription(respuestas)
             .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
-            .setURL('http://bit.ly/3dMqlPy')           
+            .setURL('http://bit.ly/3dMqlPy')       
+            .setImage('https://sro-latino.com/wp-content/uploads/2015/06/1.1.jpg')
             .setTimestamp()
             message.author.send(Embed);
            }
@@ -337,8 +345,7 @@ function ArmaLGDG15(){
             .setDescription(respuestas)
             .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
             .setURL('https://bit.ly/3nsUFjl') 
-            .setImage('https://i.imgur.com/4r81mbW.png')     
-            .setImage     
+            .setImage('https://i.imgur.com/4r81mbW.png')          
             .setTimestamp()
             message.author.send(Embed);
            }
@@ -382,7 +389,7 @@ function QuestFlamingTree(){
         if (contentss.includes(preguntas[q])) {
             Embed
             .setColor('#0099ff')
-            .setTitle('[Quest] Flaming Tree')
+            .setTitle('[Guía] Flaming Tree')
             .setDescription(respuestas)
             .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
             .setURL('https://bit.ly/3q6jymG')   

@@ -9,66 +9,85 @@ function emoji (id) {
     return client.emojis.cache.get(id).toString();
 }
 
-let Job_Code= ChannelIDs.RolesTradersID;
+
 let CEmoji= ChannelIDs.CountryEmojis;
+let ColorsEmoji= ChannelIDs.ColorsEmojis;
 let CRoles= ChannelIDs.CountryRoles;
+let Job_Code= ChannelIDs.RolesTradersID;
+let ColorsRoles= ChannelIDs.ColorsRoles;
 
 // Roles de Bandi
 	const ThiefRole = message.guild.roles.cache.find(role => role.id === "798056003010035712");
 	const HunterRole = message.guild.roles.cache.find(role => role.id === "798056012976226324");
 	const TraderRole = message.guild.roles.cache.find(role => role.id === "798056016007921724");
+
+	//ColorsRoles
+	const Color1 = message.guild.roles.cache.find(role => role.name === "Color 1");
+	const Color2 = message.guild.roles.cache.find(role => role.name === "Color 2");
+	const Color3 = message.guild.roles.cache.find(role => role.name === "Color 3");
+	const Color4 = message.guild.roles.cache.find(role => role.name === "Color 4");
+	const Color5 = message.guild.roles.cache.find(role => role.name === "Color 5");
 	
 //Roles de Paises 	
 	const VenezuelaRole = message.guild.roles.cache.find(role => role.name === "Venezuela");
 	const ArgentinaRole = message.guild.roles.cache.find(role => role.name === "Argentina");
 	const BoliviaRole = message.guild.roles.cache.find(role => role.name === "Bolivia");
 	const ColombiaRole = message.guild.roles.cache.find(role => role.name === "Colombia");
-	const CRRole = message.guild.roles.cache.find(role => role.name === "Costa rica");
-	const ChileRole = message.guild.roles.cache.find(role => role.name === "Chile");
-	const USRole = message.guild.roles.cache.find(role => role.name === "Estados Unidos");
 	const ElSalRole = message.guild.roles.cache.find(role => role.name === "El salvador");
+	const CRRole = message.guild.roles.cache.find(role => role.name === "Costa rica");
+	const RDRole = message.guild.roles.cache.find(role => role.name === "Republica dominicana");
 	const EacuadorRole = message.guild.roles.cache.find(role => role.name === "Ecuador");
 	const EspañaRole = message.guild.roles.cache.find(role => role.name === "España");
+	const ChileRole = message.guild.roles.cache.find(role => role.name === "Chile");
 	const GuatemalaRole = message.guild.roles.cache.find(role => role.name === "Guatemala");
+	const NicaraguaRole = message.guild.roles.cache.find(role => role.name === "Nicaragua");
 	const HondurasRole = message.guild.roles.cache.find(role => role.name === "Honduras");
 	const MexicoRole = message.guild.roles.cache.find(role => role.name === "Mexico");
-	const NicaraguaRole = message.guild.roles.cache.find(role => role.name === "Nicaragua");
 	const PanamaRole = message.guild.roles.cache.find(role => role.name === "Panama");
 	const PeruRole = message.guild.roles.cache.find(role => role.name === "Peru");
 	const PuertoRRole = message.guild.roles.cache.find(role => role.name === "Puerto rico");
-	const RDRole = message.guild.roles.cache.find(role => role.name === "Republica dominicana");
+	const USRole = message.guild.roles.cache.find(role => role.name === "Estados Unidos");
 	const UruguayRole = message.guild.roles.cache.find(role => role.name === "Uruguay");
+
+	
 
 	
 	const thiefEmoji= ('798055358044176414'); 
 	const hunterEmoji= ('798055357863297024');
-	const traderEmoji= ('798055358207229962');
-	
+	const traderEmoji= ('798055358207229962');	
 
 	const channel1 = await client.channels.fetch('812427165995892746')
   
      channel1.messages.fetch().then(async (messages) =>  {
       if (messages.size < 2) {
         // Send a new message
-
+		 
 			Embed
 			.setColor('RANDOM')
 			.setTitle('Selecciona un color\n')
 			.setThumbnail("https://i.imgur.com/7bh8ur3.png")
-			.setDescription(`Click en la reacción para aignar alguno de estos roles`);
-			
+			.setDescription('Haz clic en la reacción correspondiente para recibir una notificación cuando alguien busque un job en especifico, puedes mencionar esos roles en el canal General');
 			let messageEmbed = await message.channel.send(Embed);
 			messageEmbed.react(thiefEmoji);
 			messageEmbed.react(hunterEmoji);
 			messageEmbed.react(traderEmoji);
-			
-			Embed
 
-			.setDescription(`Click en la reacción para aignar alguno de estos roles`);
-			
+
+			Embed
+			.setTitle('Colores')
+			.setDescription('Haz clic en alguno de los colores abajo de este mensaje para cambiar el color de tu nombre de usuario en el servidor.');			
 			let messageEmbed1 = await message.channel.send(Embed);
+			for (let q = 0; q < ColorsEmoji.length; q++) {
+			messageEmbed1.react(ColorsEmoji[q]);	}      
+			
+
+			Embed
+			.setTitle('Paises')
+			.setDescription('Puedes asignarte uno de estos roles para mostrar tu país');
+			
+			let messageEmbed2 = await message.channel.send(Embed);
 			for (let q = 0; q < CEmoji.length; q++) {
-				messageEmbed1.react(CEmoji[q]);
+				messageEmbed2.react(CEmoji[q]);
 			
 	}      
      }
@@ -86,17 +105,18 @@ let CRoles= ChannelIDs.CountryRoles;
 	
 
 	client.on('messageReactionAdd', async (reaction, user) =>{
-	let Role_Code =reaction.message.guild.members.cache.get(user.id).roles.cache;
-	let Reaction_Await= await reaction.message.guild.members.cache.get(user.id).roles;// with this + .remove or .add you can just add or remove a role from an user
-	let Reaction_User_ID= reaction.message.guild.members.cache.get(user.id);
-
+	
 		if(user.bot) return;
 		if(!reaction.message.guild) return;
 		if(reaction.message.channel.id==ChannelIDs.RolesChannelID){
+		let Reaction_Await= await reaction.message.guild.members.cache.get(user.id).roles;// with this + .remove or .add you can just add or remove a role from an user
+		let Reaction_User_ID= reaction.message.guild.members.cache.get(user.id);
+		let Role_Code =reaction.message.guild.members.cache.get(user.id).roles.cache;
 		
 		if(cooldown.has(Reaction_User_ID)){
 			
 			reaction.users.remove(Reaction_User_ID);
+			message.author.send("**Silkroad Latino:** You're on colddown")
 			return;
 	}
 		else {
@@ -109,12 +129,8 @@ let CRoles= ChannelIDs.CountryRoles;
 			}, 1500);
 		}
 
-
-
 		//JOB
-
 		//Thief
-
 
 		if(reaction.emoji.id === thiefEmoji ){
 		
@@ -149,6 +165,64 @@ let CRoles= ChannelIDs.CountryRoles;
 			Reaction_Await.add(TraderRole);
 
 		}
+
+
+	//ColorsRoles
+		
+	else if (reaction.emoji.name === '1️⃣'){
+
+		for (let i = 0; i < ColorsRoles.length; i++) {
+			if(Role_Code.has(ColorsRoles[i])){
+			Reaction_Await.remove(ColorsRoles[i]);
+			}
+		}
+		Reaction_Await.add(Color1);
+
+	}
+
+	else if (reaction.emoji.name === '2️⃣'){
+
+		for (let i = 0; i < ColorsRoles.length; i++) {
+			if(Role_Code.has(ColorsRoles[i])){
+			Reaction_Await.remove(ColorsRoles[i]);
+			}
+		}
+		Reaction_Await.add(Color2);
+
+	}
+
+	else if (reaction.emoji.name === '3️⃣'){
+
+		for (let i = 0; i < ColorsRoles.length; i++) {
+			if(Role_Code.has(ColorsRoles[i])){
+			Reaction_Await.remove(ColorsRoles[i]);
+			}
+		}
+		Reaction_Await.add(Color3);
+
+	}
+
+	else if (reaction.emoji.name === '4️⃣'){
+
+		for (let i = 0; i < ColorsRoles.length; i++) {
+			if(Role_Code.has(ColorsRoles[i])){
+			Reaction_Await.remove(ColorsRoles[i]);
+			}
+		}
+		Reaction_Await.add(Color4);
+
+	}
+
+	else if (reaction.emoji.name === '5️⃣'){
+
+		for (let i = 0; i < ColorsRoles.length; i++) {
+			if(Role_Code.has(ColorsRoles[i])){
+			Reaction_Await.remove(ColorsRoles[i]);
+			}
+		}
+		Reaction_Await.add(Color5);
+
+	}
 
 		// Country Roles
 		
@@ -188,54 +262,54 @@ let CRoles= ChannelIDs.CountryRoles;
 
 		}
 
-			//Colombia Role
-			else if (reaction.emoji.name === '🇨🇴'){
+		//Colombia Role
+		else if (reaction.emoji.name === '🇨🇴'){
 
-				for (let i = 0; i < CRoles.length; i++) {
-					if(Role_Code.has(CRoles[i])){
-					Reaction_Await.remove(CRoles[i]);
-					}
+			for (let i = 0; i < CRoles.length; i++) {
+				if(Role_Code.has(CRoles[i])){
+				Reaction_Await.remove(CRoles[i]);
 				}
-				Reaction_Await.add(ColombiaRole);
-	
 			}
+			Reaction_Await.add(ColombiaRole);
 
-			
-	//Republica Dominicana Role
-	else if (reaction.emoji.name === '🇩🇴'){
-
-		for (let i = 0; i < CRoles.length; i++) {
-			if(Role_Code.has(CRoles[i])){
-			Reaction_Await.remove(CRoles[i]);
-			}
 		}
-		Reaction_Await.add(RDRole);
 
-	}
+				
+		//Republica Dominicana Role
+		else if (reaction.emoji.name === '🇩🇴'){
+
+			for (let i = 0; i < CRoles.length; i++) {
+				if(Role_Code.has(CRoles[i])){
+				Reaction_Await.remove(CRoles[i]);
+				}
+			}
+			Reaction_Await.add(RDRole);
+
+		}
 
 	//Ecuador Role
-	else if (reaction.emoji.name === '🇪🇨'){
+		else if (reaction.emoji.name === '🇪🇨'){
 
-		for (let i = 0; i < CRoles.length; i++) {
-			if(Role_Code.has(CRoles[i])){
-			Reaction_Await.remove(CRoles[i]);
+			for (let i = 0; i < CRoles.length; i++) {
+				if(Role_Code.has(CRoles[i])){
+				Reaction_Await.remove(CRoles[i]);
+				}
 			}
+			Reaction_Await.add(EacuadorRole);
+
 		}
-		Reaction_Await.add(EacuadorRole);
 
-	}
+		//España Role
+		else if (reaction.emoji.name === '🇪🇸'){
 
-	//España Role
-	else if (reaction.emoji.name === '🇪🇸'){
-
-		for (let i = 0; i < CRoles.length; i++) {
-			if(Role_Code.has(CRoles[i])){
-			Reaction_Await.remove(CRoles[i]);
+			for (let i = 0; i < CRoles.length; i++) {
+				if(Role_Code.has(CRoles[i])){
+				Reaction_Await.remove(CRoles[i]);
+				}
 			}
-		}
-		Reaction_Await.add(EspañaRole);
+			Reaction_Await.add(EspañaRole);
 
-	}
+		}
 
 		//Chile Role
 		else if (reaction.emoji.name === '🇨🇱'){
@@ -275,29 +349,29 @@ let CRoles= ChannelIDs.CountryRoles;
 		}
 		
 		//Honduras Role
-			else if (reaction.emoji.name === '🇭🇳'){
+		else if (reaction.emoji.name === '🇭🇳'){
 
-				for (let i = 0; i < CRoles.length; i++) {
-					if(Role_Code.has(CRoles[i])){
-					Reaction_Await.remove(CRoles[i]);
-					}
+			for (let i = 0; i < CRoles.length; i++) {
+				if(Role_Code.has(CRoles[i])){
+				Reaction_Await.remove(CRoles[i]);
 				}
-				Reaction_Await.add(HondurasRole);
-		
 			}
+			Reaction_Await.add(HondurasRole);
+	
+		}
 
 			
 		//Mexico Role
-			else if (reaction.emoji.name === '🇲🇽'){
+		else if (reaction.emoji.name === '🇲🇽'){
 
-				for (let i = 0; i < CRoles.length; i++) {
-					if(Role_Code.has(CRoles[i])){
-					Reaction_Await.remove(CRoles[i]);
-					}
+			for (let i = 0; i < CRoles.length; i++) {
+				if(Role_Code.has(CRoles[i])){
+				Reaction_Await.remove(CRoles[i]);
 				}
-				Reaction_Await.add(MexicoRole);
-		
 			}
+			Reaction_Await.add(MexicoRole);
+	
+		}
 
 		//Panama Role
 		else if (reaction.emoji.name === '🇵🇦'){
@@ -369,7 +443,7 @@ let CRoles= ChannelIDs.CountryRoles;
 					}
 				}
 				Reaction_Await.add(ElSalRole);
-		
+				
 			}
 
 				// Costa Rica Role
@@ -398,10 +472,6 @@ let CRoles= ChannelIDs.CountryRoles;
 				}**/
 				
 
-
-
-
-
 		 else 
 		 {return;}
 
@@ -415,11 +485,12 @@ let CRoles= ChannelIDs.CountryRoles;
 
 	
 	client.on('messageReactionRemove', async (reaction, user) =>{
-	let Reaction_Await= await reaction.message.guild.members.cache.get(user.id).roles;// with this + .remove or .add you can just add or remove a role from an user
+	
 
 		if(user.bot) return;
 		if(!reaction.message.guild) return;
 		if(reaction.message.channel.id==ChannelIDs.RolesChannelID){
+		let Reaction_Await= await reaction.message.guild.members.cache.get(user.id).roles;// with this + .remove or .add you can just add or remove a role from an user
 
 		if(reaction.emoji.id === thiefEmoji){
 			await Reaction_Await.remove(ThiefRole);
@@ -507,6 +578,26 @@ let CRoles= ChannelIDs.CountryRoles;
 		await Reaction_Await.remove(UruguayRole);
 	}
 
+	else if (reaction.emoji.name === '1️⃣'){
+		await Reaction_Await.remove(Color1);
+	}
+	
+	else if (reaction.emoji.name === '2️⃣'){
+		await Reaction_Await.remove(Color2);
+	}
+	
+	else if (reaction.emoji.name === '3️⃣'){
+		await Reaction_Await.remove(Color3);
+	}
+	
+	else if (reaction.emoji.name === '4️⃣'){
+		await Reaction_Await.remove(Color4);
+	}
+	
+	else if (reaction.emoji.name === '5️⃣'){
+		await Reaction_Await.remove(Color5);
+	}
+	
 
 	else{ return;}
 }

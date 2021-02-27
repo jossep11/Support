@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const pagination = require('./pagination.js');
 const fs = require('fs');
-const config = require("../token/config.json");
 const path = require("./data.json");
 const ChannelIDs = require("./commands/ChannelIDs.json");
 const client = new Discord.Client();

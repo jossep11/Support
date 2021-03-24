@@ -24,6 +24,8 @@ module.exports = {
         QuestFlamingTree();
         SetMythDG15();
 
+    
+
         //Saludos
         function Saludos() {
 		let saludos = palabras.Saludos;
@@ -419,6 +421,7 @@ function SetMythDG15(){
             .setTimestamp()
             message.author.send(Embed);
            }
+           
     }
     
 }

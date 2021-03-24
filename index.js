@@ -78,6 +78,7 @@ client.on('message', async message =>{
 
  if(message.channel.id==ChannelIDs.SupportChannel || message.channel.type==='dm'){
     client.commands.get('Words').execute(message, args, contentss, Embed, client, Discord);
+ 
     if (message.channel.id==ChannelIDs.SupportChannel){
         message.delete({ timeout: 3000 })//elimina el mensaje    
     } 
@@ -110,7 +111,7 @@ else if(contentss===('spanish section') && message.author.id==ChannelIDs.JossepI
 //whenever you type '!ayuda' it'lll show some other keywords that the bot can understand
 else if(message.channel.type==='dm' || message.channel.id===ChannelIDs.SupportChannel){
 
-  if (contentss===('!ayuda')){
+  if (contentss.startsWith('ayuda')){
   client.commands.get('SpanishInfo').execute(message, Discord, path, pagination);
 }
 

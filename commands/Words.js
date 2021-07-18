@@ -6,6 +6,7 @@ module.exports = {
 	execute(message, args, contentss, Embed) {
 		const palabras = path.contenido;
         
+
         RecuperarPW();
         Saludos();
 		Rs();
@@ -24,7 +25,9 @@ module.exports = {
         QuestFlamingTree();
         SetMythDG15();
 
-    
+        
+
+
 
         //Saludos
         function Saludos() {

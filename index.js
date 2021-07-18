@@ -76,13 +76,15 @@ client.on('message', async message =>{
 
  
 
- if(message.channel.id==ChannelIDs.SupportChannel || message.channel.type==='dm'){
-    client.commands.get('Words').execute(message, args, contentss, Embed, client, Discord);
+ if(message.channel.id==ChannelIDs.SupportChannel || message.channel.type==='dm' || message.channel.id==ChannelIDs.SupportChannelEnglish){
+   
  
-    if (message.channel.id==ChannelIDs.SupportChannel){
+    if (message.channel.id==ChannelIDs.SupportChannel || message.channel.id==ChannelIDs.SupportChannelEnglish){
         message.delete({ timeout: 3000 })//elimina el mensaje    
+       
     } 
     
+
     const palabras = path.contenido;
     let comandos= palabras.comandos;
     let respuestas = comandos[0].cmd;
@@ -108,14 +110,15 @@ else if(contentss===('spanish section') && message.author.id==ChannelIDs.JossepI
 
 }
 
-//whenever you type '!ayuda' it'lll show some other keywords that the bot can understand
-else if(message.channel.type==='dm' || message.channel.id===ChannelIDs.SupportChannel){
-
-  if (contentss.startsWith('ayuda')){
-  client.commands.get('SpanishInfo').execute(message, Discord, path, pagination);
-}
+else if(contentss===('english section') && message.author.id==ChannelIDs.JossepID){
+    
+  client.commands.get('SupportEnglish').execute(message, Discord, path);
 
 }
+
+
+
+client.commands.get('Words1c').execute(message, args, contentss, Embed, client, Discord, ChannelIDs);
 
 
 /**
@@ -137,7 +140,9 @@ if(message.content.startsWith('!clear')){
 
 
 
-
+  const ChannelAudit =client.channels.cache.find(channel=> channel.id=== "864924179043450901"); 
+  //ChannelAudit.send(message.content+ '\n this');
+ 
 
 }
 

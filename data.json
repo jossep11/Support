@@ -6,7 +6,15 @@
                   "Hola, espero que estés bien, Dime en que podría ayudarle"
                 , "¿Tienes algún problema en el juego?",
                 "Digame en que podría ayudarle"]}
-        ],           
+        ],          
+        
+        "Greetings":[
+            {"questions": ["hola", "como estas", "hey", "oye"]},
+            {"answers": ["Hello, how can I help you?", 
+                  "Hello, I hope you are well, tell me how could I help you?"
+                , "Hello, I am here to help",
+                "Hey, let me know how I can help you"]}
+        ],
 
             "respuesta secreta": [
             {"preguntas":["necesito mi respuesta secreta",

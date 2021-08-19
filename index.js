@@ -80,6 +80,10 @@ client.on('message', async message =>{
     const contentss = args.toLowerCase(); 
     if(message.author.bot) return;  
 
+    // console.log(message.author.id);
+    // console.log(message.author.tag);
+    // console.log(message.author.username);
+
 
 
 
@@ -101,7 +105,7 @@ client.on('message', async message =>{
     let comandos= palabras.comandos;
     let respuestas = comandos[0].cmd;
  
-  }   
+
 
  
  //when you type 'r' it'll activated again the role's section
@@ -134,7 +138,7 @@ else if( contentss!==('english section') || contentss!==('spanish section') ){
     message.channel.stopTyping(true);
   }
 }
-
+}   
 /**
 // update it, just a gm could see this channel and on here, whatever it say, it's finna be sent it for the bot to another channel, so it could look a little bit better and none of the users could know who sent the message
 else if(message.channel.id==="772154069887615037"){

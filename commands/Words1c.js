@@ -16,7 +16,13 @@ const [saludos, despedidas, recuperarID, recuperarClave, rated_Problema_Luancher
 //----------------------------*ENGLISH const called from data_fuctions.js*-------------------------------------
  const [greetings, goodbyes, recoverID, recoverPW, LauncherError, Find_Mediator, OficialWeb,
         Silk_PayPal, Level_UP, BuyGold, Phantom_Guide, BlueZerk_Guide] = data_english_spanish.English_logic(contentss);   
-
+       // console.log(message.author.tag);
+       const ChannelAuditx =client.channels.cache.find(channel=> channel.id=== "864924179043450901"); 
+       const ChannelAudit_General =client.channels.cache.find(channel=> channel.id=== "877635359301853184"); 
+       var datex = new Date();
+       date_send=datex.toLocaleTimeString();
+       
+       ChannelAudit_General.send(`**[**__${date_send}__**]** :pencil: **${message.author.tag}** (__${message.author.id}__) has asked:\n${message.content}`);
 
 //conditional greeting--------------------------------------------------------------------------------------------------- 1
  if (saludos[0].distance >= 0.89 ) {
@@ -26,15 +32,18 @@ let respuestas = saludos_answer[1].respuestas;
 let aleatorio = Math.floor(Math.random() * respuestas.length);
 
 message.author.send(respuestas[aleatorio]);
-const ChannelAuditx =client.channels.cache.find(channel=> channel.id=== "864924179043450901"); 
-
 } 
 
 
 //Condicional Despedida---------------------------------------------------------------------------------------------------- 2
 else if(despedidas[0].distance>=0.89){
 console.log(despedidas[0].distance);
-console.log("Running " + despedidas[0].despedida + "?");// i have to do it
+console.log("Running " + despedidas[0].despedida + "?");
+let despedidas_answer = palabras.Despedidas;
+let respuestas = despedidas_answer[1].respuestas;
+let aleatorio = Math.floor(Math.random() * respuestas.length);
+
+message.author.send(respuestas[aleatorio]);
 }
 
 //Condicional RecuperarID--------------------------------------------------------------------------------------------------- 3
@@ -54,12 +63,12 @@ else if(recuperarID[0].distance>=0.89 && contentss.includes('id') || recuperarID
 }
 
 //Condicional RecuperarClave--------------------------------------------------------------------------------------------------4
-else if(recuperarClave[0].distance>=0.96 && contentss.includes('mi clav') ||recuperarClave[0].distance>=0.96 && contentss.includes('clav') ){
+else if(recuperarClave[0].distance>=0.96 && contentss.includes('mi clav') ||recuperarClave[0].distance>=0.96 && contentss.includes('clav') ||recuperarClave[0].distance>=0.96 && contentss.includes('contr') ){
     //console.log(recuperarClave[0].distance);
     //console.log("Running " + recuperarClave[0].recuperar_clave + "?");// 
     Embed
     .setColor('#0099ff')
-    .setTitle('Recuperar PW')
+    .setTitle('Recuperar Contraseña')
     .setURL('http://bit.ly/3rPFoN1')
     .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
     .addField('Nota:', 'No podrás recuperar la clave si no sabes cuál es su respuesta secreta, para recuperar su clave secreta puede dirigirse a:')
@@ -72,12 +81,12 @@ else if(recuperarClave[0].distance>=0.96 && contentss.includes('mi clav') ||recu
 
 //Problema con LUANCHER-------------------------------------------------------------------------------------------------------5
 else if(rated_Problema_Luancher[0].distance>=0.89){
-    //console.log(rated_Problema_Luancher[0].distance);
+    console.log(rated_Problema_Luancher[0].distance);
     //console.log("Running " + rated_Problema_Luancher[0].problemaluancher + "?");//
     let clienterror = palabras.LauncherError;
     let respuestas = clienterror[1].respuestas;
     Embed
-    .setColor('RANDOM')
+    .setColor('#0099ff')
     .setTitle('Solución de Launcher')
     .setURL('https://wiki.srolatino-servers.com/faq/silkroad-online-launcher-dejo-de-funcionar/')
     .setDescription(respuestas)
@@ -91,7 +100,7 @@ else if(rated_Problema_Luancher[0].distance>=0.89){
 
 //Conseguir un mediador----------------------------------------------------------------------------------- 6
 else if(rated_Conseguir_Mediador[0].distance>=0.89){
-    //console.log(rated_Conseguir_Mediador[0].distance);
+    console.log(rated_Conseguir_Mediador[0].distance);
     //console.log("Running " + rated_Conseguir_Mediador[0].conseguirMediador + "?");
     Embed
     .setColor('#0099ff')
@@ -104,7 +113,7 @@ else if(rated_Conseguir_Mediador[0].distance>=0.89){
 
 //Pagina oficial del videojuego----------------------------------------------------------------------------------- 7
 else if(rated_Pagina_VideoJuego[0].distance>=0.89){
-   // console.log(rated_Pagina_VideoJuego[0].distance);
+   console.log(rated_Pagina_VideoJuego[0].distance);
    // console.log("Running " + rated_Pagina_VideoJuego[0].PaginaVideoJuego + "?");// 
    Embed
    .setColor('#0099ff')
@@ -117,7 +126,7 @@ else if(rated_Pagina_VideoJuego[0].distance>=0.89){
 
 //COMPRAR SILK VIA PAYPAL----------------------------------------------------------------------------------- 8
 else if(rated_Silk_Via_PayPal[0].distance>=0.89){
-    //console.log(rated_Silk_Via_PayPal[0].distance);
+    console.log(rated_Silk_Via_PayPal[0].distance);
     //console.log("Running " + rated_Silk_Via_PayPal[0].Silk_PayPal + "?");// 
     Embed
    .setColor('#0099ff')
@@ -144,7 +153,7 @@ else if(rated_Subir_Nivel[0].distance>=0.89){
 
 //COMPRAR GOLD----------------------------------------------------------------------------------- 10
 else if(rated_ComprarGold[0].distance>=0.89){
-    //console.log(rated_ComprarGold[0].distance);
+    console.log(rated_ComprarGold[0].distance);
     //console.log("Running " + rated_ComprarGold[0].ComprarGold + "?");// i have to do it
     Embed
     .setColor('#0099ff')
@@ -157,8 +166,8 @@ else if(rated_ComprarGold[0].distance>=0.89){
 }
 
 //Guia Phanton----------------------------------------------------------------------------------- 11
-else if(rated_guiaphanton[0].distance>=0.89){
-    //console.log(rated_guiaphanton[0].distance);
+else if(rated_guiaphanton[0].distance>=0.89 && contentss.includes('guia phant') || rated_guiaphanton[0].distance>=0.89 && contentss.includes('guiaph')){
+    console.log(rated_guiaphanton[0].distance);
     //console.log("Running " + rated_guiaphanton[0].guia_phanton + "?");// i have to do it
     Embed
     .setColor('#0099ff')
@@ -171,7 +180,7 @@ else if(rated_guiaphanton[0].distance>=0.89){
 }
 
 //Guia zerk azul----------------------------------------------------------------------------------- 12
-else if(rated_guia_zerk_azul[0].distance>=0.89){
+else if(rated_guia_zerk_azul[0].distance>=0.89 && contentss.includes('zerk az') || rated_guia_zerk_azul[0].distance>=0.89 && contentss.includes('guiazer')){
     //console.log(rated_guia_zerk_azul[0].distance);
     //console.log("Running " + rated_guia_zerk_azul[0].guia_zerkAzul + "?");// i have to do it
     Embed
@@ -228,7 +237,13 @@ const ChannelAuditx =client.channels.cache.find(channel=> channel.id=== "8649241
 //Condicional Despedida---------------------------------------------------------------------------------------------------- 2
 else if(goodbyes[0].distance>=0.89){
     console.log(goodbyes[0].distance);
-    console.log("Running " + goodbyes[0].goodbye + "?");// i have to do it
+    let goodbye_answer = palabras.GoodByes;
+    let answers = goodbye_answer[1].answers;
+    let aleatorio = Math.floor(Math.random() * answers.length);
+
+    message.author.send(answers[aleatorio]);
+    //console.log("Running " + goodbyes[0].goodbye + "?");// i have to do it
+    
     }
     
     //Condicional RecuperarID--------------------------------------------------------------------------------------------------- 3
@@ -237,10 +252,10 @@ else if(goodbyes[0].distance>=0.89){
         //console.log("Running " + recuperarID[0].recuperarid + "?");// 
         Embed
         .setColor('#0099ff')
-        .setTitle('Recuperar ID')
+        .setTitle('Recover ID')
         .setURL('http://bit.ly/3rPFoN1')
         .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
-        .addField('Para recuperar ID:', 'En el apartado que puede visualizar debera ingresar su correo electrónico, comprobar que es un humano y luego de ello, se le enviará un correo recordándole cual es el ID asociado al correo: https://www.alfa.srolatino-servers.com/register/recoveryID')
+        .addField('To retrieve ID: ',' In the section you can see, you need to insert your email, verify that you are a human being and after that, an email will be sent, reminding you the ID associated to the email: https://www.alfa.srolatino-servers.com/register/recoveryID')
         .setImage('https://wiki.srolatino-servers.com/wp-content/uploads/2018/01/6.jpg')
         .setTimestamp()
         message.author.send(Embed);
@@ -248,17 +263,17 @@ else if(goodbyes[0].distance>=0.89){
     }
     
     //Condicional RecuperarClave--------------------------------------------------------------------------------------------------4
-    else if(recoverPW[0].distance>=0.96 && contentss.includes('my passw') ||recoverPW[0].distance>=0.96 && contentss.includes('passw') ){
+    else if(recoverPW[0].distance>=0.96 && contentss.includes('my passw') ||recoverPW[0].distance>=0.96 && contentss.includes('passw') ||recoverPW[0].distance>=0.96 && contentss.includes('pw') ){
         //console.log(recuperarClave[0].distance);
         //console.log("Running " + recuperarClave[0].recuperar_clave + "?");// 
         Embed
         .setColor('#0099ff')
-        .setTitle('Recuperar PW')
+        .setTitle('Recover Password')
         .setURL('http://bit.ly/3rPFoN1')
         .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
-        .addField('Nota:', 'No podrás recuperar la clave si no sabes cuál es su respuesta secreta, para recuperar su clave secreta puede dirigirse a:')
-        .addField('Recuperar clave secreta','https://bit.ly/31W83F2')
-        .addField('Para recuperar la contraseña:', 'Debe ingresar el ID de su usuarios y su clave secreta, una vez que completamos el ID, contraseña secreta, el sistema nos enviará un email a nuestra casilla de correo asociada. Ahí nos facilitará un enlace para ingresar una nueva contraseña: https://www.alfa.srolatino-servers.com/register/recoveryPassword')
+        .addField('Note: ',' You will not be able to recover the password if you do not know what the secret answer is, to recover your secret answer you can do this:')
+        .addField('Recover secret password','https://bit.ly/31W83F2')
+        .addField('To retrieve the password: ',' You must insert the ID of your user and their secret password, once we insert the ID and the secret password, the system will send you an email to your associated email. There it will provide you a link to enter a new password: https://www.alfa.srolatino-servers.com/register/recoveryPassword')
         .setImage('https://wiki.srolatino-servers.com/wp-content/uploads/2018/01/7.jpg')
         .setTimestamp()
         message.author.send(Embed);
@@ -268,11 +283,11 @@ else if(goodbyes[0].distance>=0.89){
     else if(LauncherError[0].distance>=0.89){
         //console.log(rated_Problema_Luancher[0].distance);
         //console.log("Running " + rated_Problema_Luancher[0].problemaluancher + "?");//
-        let clienterror = palabras.LauncherError;
-        let respuestas = clienterror[1].respuestas;
+        let clienterror = palabras.LauncherErrorEnglish;
+        let respuestas = clienterror[1].answer;
         Embed
-        .setColor('RANDOM')
-        .setTitle('Solución de Launcher')
+        .setColor('#0099ff')
+        .setTitle('Launcher Error')
         .setURL('https://wiki.srolatino-servers.com/faq/silkroad-online-launcher-dejo-de-funcionar/')
         .setDescription(respuestas)
         .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
@@ -285,13 +300,13 @@ else if(goodbyes[0].distance>=0.89){
     
     //Conseguir un mediador----------------------------------------------------------------------------------- 6
     else if(Find_Mediator[0].distance>=0.89){
-        //console.log(rated_Conseguir_Mediador[0].distance);
+        console.log(Find_Mediator[0].distance);
         //console.log("Running " + rated_Conseguir_Mediador[0].conseguirMediador + "?");
         Embed
         .setColor('#0099ff')
-        .setTitle('Mediadores Oficiales')
+        .setTitle('Official Mediators')
         .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
-        .setDescription("En el videojuego puede contactar a cualquiera de los siguientes mediadores: \n[GM]Celes \n[GM]Nao \n[GM]Scream \n[GM]Servivenet")
+        .setDescription("In the videogame you can contact any of the following mediators: \n[GM]Celes \n[GM]Nao \n[GM]Scream \n[GM]Servivenet")
         .setTimestamp()
         message.author.send(Embed);
     }
@@ -302,7 +317,7 @@ else if(goodbyes[0].distance>=0.89){
        // console.log("Running " + rated_Pagina_VideoJuego[0].PaginaVideoJuego + "?");// 
        Embed
        .setColor('#0099ff')
-       .setTitle('Página Oficial del Servidor')
+       .setTitle('Official Website')
        .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
        .setDescription("-> https://www.alfa.srolatino-servers.com")
        .setTimestamp()
@@ -311,13 +326,13 @@ else if(goodbyes[0].distance>=0.89){
     
     //COMPRAR SILK VIA PAYPAL----------------------------------------------------------------------------------- 8
     else if(Silk_PayPal[0].distance>=0.89){
-        //console.log(rated_Silk_Via_PayPal[0].distance);
+        console.log(rated_Silk_Via_PayPal[0].distance);
         //console.log("Running " + rated_Silk_Via_PayPal[0].Silk_PayPal + "?");// 
         Embed
        .setColor('#0099ff')
-       .setTitle('Silk Vía PayPal')
+       .setTitle('Silk by PayPal')
        .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
-       .setDescription("Puede comprarle silk vía PayPal a cualquier GM dentro del juego (con entrega inmediata) o comprar directamente en la web, pero esta puede demorar hasta 48 horas para entregar el producto")
+       .setDescription("You can buy silk by PayPal from any GM in the game (with immediate delivery) or buy directly on the website, but the delivery of the product can take up to 48 hours.")
        .setTimestamp()
        message.author.send(Embed);
     }
@@ -328,9 +343,9 @@ else if(goodbyes[0].distance>=0.89){
         //console.log("Running " + rated_Subir_Nivel[0].SubirNivel + "?");// 
         Embed
         .setColor('#0099ff')
-        .setTitle('Subir de Nivel')
+        .setTitle('Level up')
         .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
-        .setDescription("Puede subir de nivel matando monstruos de niveles ligeramente más altos que usted o completando misiones dentro del videojeugo ")
+        .setDescription("You can level up by killing monsters of slightly higher levels than you or by completing missions within the videogame.")
         .setTimestamp()
         message.author.send(Embed);
     
@@ -342,9 +357,9 @@ else if(goodbyes[0].distance>=0.89){
         //console.log("Running " + rated_ComprarGold[0].ComprarGold + "?");// i have to do it
         Embed
         .setColor('#0099ff')
-        .setTitle('Comprar Oro')
+        .setTitle('Buy Gold')
         .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
-        .setDescription("El comercio entre usuarios esta permitido y puede comprarle oro a cualquier usuario dentro del juego, solo asegúrese de siempre acudir a algun mediador oficial en el videojuego para que le ayude con su compra, así evitando posibles estafas")
+        .setDescription("Trade between users is allowed and you can buy gold from any user within the game, just make sure to always use an official mediator in the video game to help you with your purchase, thus avoiding possible scams")
         .setTimestamp()
         message.author.send(Embed);
     
@@ -356,47 +371,29 @@ else if(goodbyes[0].distance>=0.89){
         //console.log("Running " + rated_guiaphanton[0].guia_phanton + "?");// i have to do it
         Embed
         .setColor('#0099ff')
-        .setTitle('Guía Phantom')
+        .setTitle('Phantom Guide')
         .setURL('https://wiki.srolatino-servers.com/faq/quest-phantom-desert/')
         .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
-        .setDescription("A phantom puede ingresar a partir del nivel 130 y dentro de la misma debe realizar 15 misiones para terminarlas \n")
+        .setDescription("You can enter to the phantom city from level 130 and within it you must perform 15 missions to finish them\n")
         .setTimestamp()
         message.author.send(Embed);
     }
     
     //Guia zerk azul----------------------------------------------------------------------------------- 12
     else if(BlueZerk_Guide[0].distance>=0.89){
-        //console.log(rated_guia_zerk_azul[0].distance);
+        console.log(BlueZerk_Guide[0].distance);
         //console.log("Running " + rated_guia_zerk_azul[0].guia_zerkAzul + "?");// i have to do it
         Embed
         .setColor('#0099ff')
-        .setTitle('Guía de Zerk Azul')
+        .setTitle('Blue Zerk Guide')
         .setURL('https://wiki.srolatino-servers.com/faq/titulos-knight-captain-baronet-general-baron-senior-general-count-chief-general/')
         .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
         .setImage('http://4.bp.blogspot.com/-usb9Lv2FagM/Vm4EODFv1MI/AAAAAAAAAHQ/kQHtxmXckgg/s1600/blue_berserk_1.jpg')
-        .setDescription("Los niveles requeridos para realizar estas misiones son: \nLv 95\nLv 100\nLv 105\nLv 110")
+        .setDescription("The levels required to perform these missions are:\nLv 95\nLv 100\nLv 105\nLv 110")
         .setTimestamp()
         message.author.send(Embed);
     }
     
-
-
-
-     else if(contentss.includes("hi") ){
-        message.author.send("Hello sir, how can I help you?");
-        
-    }
-    else if(contentss.includes("thank")){
-        message.author.send("You're welcome, we're here for whatever you need.");   
-    }    
-    
-    else if(contentss.includes("grac")){
-        message.author.send("De nada, estamos aca para lo que necesites.");
-        
-    }
-
-
-
 
 
 
@@ -419,6 +416,7 @@ else if(goodbyes[0].distance>=0.89){
  }
 
     //Default responses --PUT HERE ON THE DEFAULT ANSWER THE VERSION IN ENGLISH
+    
     else{
 
         let RespuestaPred= palabras.RespuestasPred;
@@ -427,6 +425,11 @@ else if(goodbyes[0].distance>=0.89){
         console.log(aleatorio);
 
         message.author.send(respuestas[aleatorio]);
+        console.log(message.content);
+        console.log(datex.toLocaleTimeString());
+        
+        ChannelAuditx.send(`<@&797681991968882699>\n**[**__${date_send}__**]** :rotating_light: **${message.author.tag}** (__${message.author.id}__) has asked:\n${message.content}`);
+       
 
     }
    

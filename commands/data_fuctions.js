@@ -4,9 +4,8 @@ function Spanish_logic(contentss ) {
 
 
 //Saludos----------------------------------------------------------------------------------- 1
-var saludos = ['hola','ayudar con algo', 'necesito ayuda', 'save', 'revert', 'select', 'copy', 'duplicate', 'subtract'];
+var saludos = ['hola','ayudar con algo', 'necesito ayuda', 'estas ahi', 'oye', 'me puedes ayudar', 'como estas', 'me podrias ayudar', 'como te va', 'que onda', 'hola como estas'];
 var rated_Saludo = [];
-
 saludos.forEach(function(saludo) {
   rated_Saludo.push({
     saludo: saludo,
@@ -28,7 +27,7 @@ return 1;
 
 
 //Despedidas----------------------------------------------------------------------------------- 2
-var despedidas = ['chao','hasta luego', 'nos vemos', 'un placer', 'gracias'];
+var despedidas = ['chao','hasta luego', 'nos vemos', 'un placer', 'gracias' , 'gracias por todo', 'muchas gracias', 'adios'];
 var rated_Despedida    = [];
 
 despedidas.forEach(function(despedida) {
@@ -55,7 +54,7 @@ rated_Despedida.sort(function(a, b) {
 var recuperarID = ['¿buenas, como puedo recuperar mi id?', 'hola, necesito recuperar mi id', 
 'hola, necesito recuperar mi usuar', 'necesito recuperar mi id','recuperar mi id', 'necesito mi id', 
 'como recuperar mi id', 'olvide mi id', 'se me olvido el id', 'se me olvido mi id', 'como puedo recuperar mi id', 
-'olvide mi id, como la recupero', 'como puedo recuperar mi usuario', 'olvide mi usuario', 'recuperar mi usuario', 'recuperar id'];
+'olvide mi id, como la recupero', 'como puedo recuperar mi usuario', 'olvide mi usuario', 'recuperar mi usuario', 'recuperar id', 'quiero recuperar mi id', 'recuperarid'];
 var rated_recuperarID    = [];
 
 recuperarID.forEach(function(recuperarid) {
@@ -82,7 +81,9 @@ rated_recuperarID.sort(function(a, b) {
 var recuperarClave = ['¿como puedo recuperar mi clave?','hola, como puedo recuperar mi clave',
 'necesito recuperar mi clave','recuperar mi clave', 'necesito mi clave', 'como recuperar mi clave', 
 'olvide mi clave', 'se me olvido el clave', 'se me olvido mi clave', 'como puedo recuperar mi clave', 
-'olvide mi clave, como la recupero', 'como puedo recuperar mi clave', 'olvide mi clave', 'recuperar mi clave'];
+'olvide mi clave, como la recupero', 'como puedo recuperar mi clave', 'olvide mi clave', 'recuperar mi clave'
+, 'recuperar mi contraseña', 'necesito mi contraseña', 'olvide mi contraseña', 'recuperarclave'
+];
 var rated_recuperarClave  = [];
 
 recuperarClave.forEach(function(recuperar_clave) {
@@ -108,7 +109,9 @@ rated_recuperarClave.sort(function(a, b) {
 //Problema con LUANCHER----------------------------------------------------------------------------------- 5
 var Problema_Luancher = ['tengo problemas con mi launcher ¿como puedo solucionarlo?','hola, tengo problemas con mi launcher ¿como puedo solucionarlo?',
 'hola, tengo problema con el luancher','mi client me da dc', 'tengo un problema con el juego', 'problema con el luancher', 
-'hola tengo problemas con el luancher', 'tengo problemas con el luancher', 'problema con mi launcher', 'problema con launcher'];
+'hola tengo problemas con el luancher', 'tengo problemas con el luancher', 'problema con mi launcher', 'problema con launcher',
+'errorlauncher'
+];
 var rated_Problema_Luancher  = [];
 
 Problema_Luancher.forEach(function(problemaluancher) {
@@ -134,7 +137,7 @@ rated_Problema_Luancher.sort(function(a, b) {
 
 //Conseguir un mediador----------------------------------------------------------------------------------- 6
 var Conseguir_Mediador= ['¿donde puedo conseguir a un mediador?','donde puedo conseguir un mediador', 'necesito un mediador',
-'hola, donde puedo conseguir un mediador','hola, necesito de un mediador', 'necesito una mediacion'];
+'hola, donde puedo conseguir un mediador','hola, necesito de un mediador', 'necesito una mediacion', 'mediador'];
 var rated_Conseguir_Mediador  = [];
 
 Conseguir_Mediador.forEach(function(conseguirMediador) {
@@ -159,8 +162,8 @@ rated_Conseguir_Mediador.sort(function(a, b) {
 
 
 //Pagina oficial del videojuego----------------------------------------------------------------------------------- 7
-var Pagina_VideoJuego= ['¿hola cual es la pagina oficial del videojuego?','hola cual es la pagina oficial del videojuego', 'cual es la pagina oficial del videojuego',
-'la pagina del videojuego'];
+var Pagina_VideoJuego= ['¿hola cual es la pagina oficial del videojuego?','hola cual es la pagina oficial del videojuego', 'cual es la pagina oficial del videojuego', 'pagina del videojueg','necesito la pagina del videojuego',
+'la pagina del videojuego', 'paginaoficial'];
 var rated_Pagina_VideoJuego  = [];
 
 Pagina_VideoJuego.forEach(function(PaginaVideoJuego) {
@@ -186,7 +189,7 @@ rated_Pagina_VideoJuego.sort(function(a, b) {
 
 //COMPRAR SILK VIA PAYPAL----------------------------------------------------------------------------------- 8
 var Silk_Via_PayPal= ['donde puedo comprar silk via paypal?','hola, donde puedo comprar silk via paypal', 'donde puedo comprar silk por paypal',
-'necesito comprar silk por paypal', 'necesito silk por paypal', 'comprar silk via paypal', 'silk via paypal'];
+'necesito comprar silk por paypal', 'necesito silk por paypal', 'comprar silk via paypal', 'silk via paypal',];
 var rated_Silk_Via_PayPal  = [];
 
 Silk_Via_PayPal.forEach(function(Silk_PayPal) {
@@ -213,7 +216,7 @@ rated_Silk_Via_PayPal.sort(function(a, b) {
 
 //COMO SUBIR DE NIVEL----------------------------------------------------------------------------------- 9
 var Subir_Nivel= ['¿como puedo subir de nivel?','hola, como puedo subir de nivel', 'como subir de nivel',
-'necesito subir de nivel', 'subir de nivel', 'necesito subir mas rapido de nivel'];
+'necesito subir de nivel', 'subir de nivel', 'necesito subir mas rapido de nivel', 'SubirNivel'];
 var rated_Subir_Nivel  = [];
 
 Subir_Nivel.forEach(function(SubirNivel) {
@@ -240,7 +243,7 @@ rated_Subir_Nivel.sort(function(a, b) {
 
 //COMPRAR GOLD----------------------------------------------------------------------------------- 10
 var Comprar_Gold= ['¿a quien le puedo comprar oro?','hola, a quien le puedo comprar oro', 'a quien puedo comprarle oro',
-'donde puedo comprar oro', 'sabes a quien pueda comprarle oro'];
+'donde puedo comprar oro', 'sabes a quien pueda comprarle oro', 'comprar oro' , 'como puedo comprar oro', 'necesito comprar oro', 'yo necesito comprar oro', 'como comprar oro'];
 var rated_ComprarGold  = [];
 
 Comprar_Gold.forEach(function(ComprarGold) {
@@ -265,7 +268,7 @@ rated_ComprarGold.sort(function(a, b) {
 
 
 //Guia Phanton----------------------------------------------------------------------------------- 11
-var Guia_Phanton= ['¿donde puedo conseguir la guía de phantom?','necesito la guia de phantom', 'guia phantom'
+var Guia_Phanton= ['¿donde puedo conseguir la guía de phantom?','necesito la guia de phantom', 'guia de phantom', 'necesito guia phantom', 'guiaphantom'
 , 'donde consigo la guia de phantom'];
 var rated_guiaphanton  = [];
 
@@ -291,7 +294,7 @@ rated_guiaphanton.sort(function(a, b) {
 
 
 //Guia zerk azul----------------------------------------------------------------------------------- 12
-var Guia_ZerkAzul= ['¿me podria facilitar la guía de zerk azul?','necesito la guia de zerk azul', 'guia zerk azul', 'zerk azul'];
+var Guia_ZerkAzul= ['¿me podria facilitar la guía de zerk azul?','necesito la guia de zerk azul', 'guia zerk azul', 'zerk azul', 'guiazerkazul'];
 var rated_guia_zerk_azul  = [];
 
 Guia_ZerkAzul.forEach(function(guia_zerkAzul) {
@@ -355,7 +358,7 @@ return 1;
 
 
 //Goodbyes ----------------------------------------------------------------------------------- 2
-var goodbyes = ['bye','see you', 'see you later', 'thanks', 'thank you', 'thank you so much'];
+var goodbyes = ['bye','see you', 'see you later', 'thanks', 'thank you', 'thank you so much', 'ok thanks'];
 var rated_Goodbyes    = [];
 
 goodbyes.forEach(function(goodbye) {
@@ -382,7 +385,7 @@ rated_Goodbyes.sort(function(a, b) {
 var recuperarID = ['hi, how can i recover my id?', 'hi, i need to recover my id', 
 'hi, i need to recover my user', 'i need to recover my id','recover my id', 'recover id', 
 'how can i recover my id', 'i forgot my id', 'forgot my id', 'need my id', 'hello, how can i recover my id', 
-'i forgot my id, how can i recover it', 'hey i need to recover my id', 'hello i forgot my id', 'recover my user id', 'i need to get my id'];
+'i forgot my id, how can i recover it', 'hey i need to recover my id', 'hello i forgot my id', 'recover my user id', 'i need to get my id', 'recoverid'];
 var rated_recuperarID    = [];
 
 recuperarID.forEach(function(recuperarid) {
@@ -405,11 +408,12 @@ rated_recuperarID.sort(function(a, b) {
 
 
 
-//RECUPERAR Clave----------------------------------------------------------------------------------- 4
+//RECUPERAR PASSWORd----------------------------------------------------------------------------------- 4
 var recoverPassword = ['how can i recover my password','hi, how can i recover my password',
 'i need to recovery my password','recover my password', 'i need my password', 'hello i need my password', 'recover my pw', 
 'i forgot my pw', 'i forgot my password', 'i forgot password', 'how can i recover my password', 
-'i forgot my password, how can i recovery it', 'how i recover my password', 'how recover my password', 'how can i recover my pw', 'olvide mi clave', 'recover my password'];
+'i forgot my password, how can i recovery it', 'how i recover my password', 'how recover my password', 'how can i recover my pw', 'recover my password', 'recoverpw'
+, 'need my password'];
 var rated_recoverPassword  = [];
 
 recoverPassword.forEach(function(recover_password) {
@@ -428,14 +432,14 @@ rated_recoverPassword.sort(function(a, b) {
     return 0;
     }
 }); 
-//END OF RECUPERAR Clave
+//END OF RECUPERAR PASSWORD
 
 
 
 //LUANCHER error----------------------------------------------------------------------------------- 5
 var launcher_errors = ['i have some problems with my  launcher, how can i fix it','hi, i have some errors in my launcher',
 'im having problems with my launcher','my client dc me', 'i have some problems with the videogame', 'client error','i am having some problems with my launcher', 
-'launcher problems'];
+'launcher problems', 'launcher error', 'clienterror'];
 var rated_Launcher_Error  = [];
 
 launcher_errors.forEach(function(errorLauncher) {
@@ -461,7 +465,7 @@ rated_Launcher_Error.sort(function(a, b) {
 
 //find a mediator----------------------------------------------------------------------------------- 6
 var Find_Mediator= ['where can i find a mediator?','how can i find a mediator', 'i need a mediator',
-'need a mediator','hi, i need a mediator', 'hello i need a mediator'];
+'need a mediator','hi, i need a mediator', 'hello i need a mediator', '!MediatorsName'];
 var rated_FindAMediator  = [];
 
 Find_Mediator.forEach(function(findMediator) {
@@ -487,7 +491,7 @@ rated_FindAMediator.sort(function(a, b) {
 
 //official website----------------------------------------------------------------------------------- 7
 var Videogame_Web= ['hi what is the official website of the videogame','what is the official website of the videogame', 'how can i find the official website of the videogame',
-,'what is the website','website of the videogame', 'need the website'];
+,'what is the website','website of the videogame', 'need the website', 'official website', 'what is the official website', 'website'];
 var rated_Web  = [];
 
 Videogame_Web.forEach(function(website) {
@@ -540,7 +544,7 @@ rated_Silk_By_PayPal.sort(function(a, b) {
 
 //How to level up----------------------------------------------------------------------------------- 9
 var Level_UP= ['¿how can i level up?','hi, how can i level up', 'how level up',
-'i need to level up', 'level up', 'need to level up faster'];
+'i need to level up', 'level up', 'need to level up faster', 'how can i level up faster'];
 var rated_LevelUp  = [];
 
 Level_UP.forEach(function(LevelUp) {
@@ -567,7 +571,7 @@ rated_LevelUp.sort(function(a, b) {
 
 //BUYING GOLD----------------------------------------------------------------------------------- 10
 var BuyGold= ['who can i buy gold from?','hey i need to buy gold', 'i need to buy gold','who can i buy gold?',
-'where can i buy gold', 'who sells gold? '];
+'where can i buy gold', 'who sells gold?', 'need to buy gold', 'how buy gold', 'how can i buy gold', 'buygold'];
 var rated_buy_gold  = [];
 
 BuyGold.forEach(function(buy_gold) {
@@ -593,7 +597,7 @@ rated_buy_gold.sort(function(a, b) {
 
 //Guide Phantom----------------------------------------------------------------------------------- 11
 var phantom_guide= ['where can i get the phantom guide?','i need the phantom guide', 'need the phantom guide'
-, 'phantom guide'];
+, 'phantom guide', 'phantomguide'];
 var rated_guidephantom  = [];
 
 phantom_guide.forEach(function(phantom__guide) {
@@ -618,7 +622,7 @@ rated_guidephantom.sort(function(a, b) {
 
 
 //blue zerk guide----------------------------------------------------------------------------------- 12
-var BlueZerk_Guide= ['could you provide me with the blue zerk guide?','i need the blue zerk guide', 'blue zerk buide', 'need blue zerk guide'];
+var BlueZerk_Guide= ['could you provide me with the blue zerk guide?','i need the blue zerk guide', 'blue zerk buide', 'need blue zerk guide', 'bluezerk'];
 var rated_Blue_Zerk_Guide  = [];
 
 BlueZerk_Guide.forEach(function(blue_zerkGuide) {

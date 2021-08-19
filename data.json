@@ -5,9 +5,19 @@
             {"respuestas": ["Hola, ¿como puedo ayudarle?", 
                   "Hola, espero que estés bien, Dime en que podría ayudarle"
                 , "¿Tienes algún problema en el juego?",
-                "Digame en que podría ayudarle"]}
-        ],          
+                "Digame en que podría ayudarle", "Hola, soy todo oidos", "Saludos, ¿hay algo en lo que pueda servirle?"]}
+        ],
+
+        "Despedidas":[
+            {"preguntas": [""]},
+            {"respuestas": ["Un placer atenderle, estamos acá para servir", "Hasta luego, si necesitas algo más, puedes contactar a algun GM dentro del videojuego", "Hasta luego, que tenga un excelente día", "Ok, te estaremos esperando por acá", "Adiós"]}
+        ],
         
+        "GoodByes":[
+            {"preguntas": [""]},
+            {"answers": ["A pleasure to serve you, we are here to serve ", "See you, if you need anything else, you can contact a GM within the game", "See you, have a great day", "Ok, we will be waiting for you here ", "Goodbye, have a good one"]}
+        ],
+
         "Greetings":[
             {"questions": ["hola", "como estas", "hey", "oye"]},
             {"answers": ["Hello, how can I help you?", 
@@ -51,6 +61,11 @@
                 "client se paro"]},
             {"respuestas":["Puede solucionar este error siguiendo los pasos que estan en la guia, si el problema continúa, contactese con algún GM"]}              
             ],
+
+            "LauncherErrorEnglish": [
+                {"preguntas":["client se paro"]},
+                {"answer":["You can solve this error by following the steps in the guide, if the problem persists, contact a GM"]}              
+                ],
 
             "RecuperarID":[
                 {"preguntas":["olvide mi id",
@@ -179,71 +194,75 @@
             "comandos":[
                 {"Support_C_Esp":[
                     "Saludos!, este es el chatbot del Sro Servivenet, a continuación tienen algunas de muchas convionaciones de palabras claves a las cuales nuestro chatbot atienden \n\n",
-                    "**`!clienterror  `** - Solución de problema con el cliente \n",
-                    "**`!RecuperarID  `** - Forma de recuperar la ID \n",
-                    "**`!RecuperarPW  `** - Forma de recuperar la contraseña \n",
-                    "**`!RecuperarRS  `** - Forma de recuperar la Clave secreta \n",
-                    "**`!QuestZerk    `** - Guía de zerk azul \n",
-                    "**`!Zerk120      `** - Guía de título Marquis & Vice General Lord \n",
-                    "**`!ArmaLGDG13   `** - Guía de Arma Legend DG13\n",
-                    "**`!SetLGDG13    `** - Guía de equipamiento Legend DG13\n",
-                    "**`!ArmaLGDG14   `** - Guía de Arma Legend DG14 \n",
+                    
+                    "**`!RecuperarID   `** - Forma de recuperar la ID \n",
+                    "**`!RecuperarClave`** - Forma de recuperar la contraseña \n",
+                    "**`!ErrorLauncher `** - Solución de problema con el cliente \n",
+                    "**`!PaginaOficial `** - Página Oficial del videojuego \n",
+                    "**`!ComprarOro    `** - Forma de comprar oro dentro del videojuego \n",
+                    "**`!SubirNivel    `** - Manera de subir de nivel \n",
+                    "**`!GuiaZerkAzul  `** - Guía de zerk azul\n",
+                    "**`!Mediador      `** - Nombre de mediadores dentro del videojuego\n",
                     "Para ver el resto de comandos a los cuales respondo, escribir**>`!ayuda`** \n"]}],                
 
                    
             "ayuda":[
-                {"Support_Priviate_Esp0":["**`!clienterror  `** - Solución de problema con el cliente \n",
-                    "**`!RecuperarID  `** - Forma de recuperar la ID \n",
-                    "**`!RecuperarPW  `** - Forma de recuperar la contraseña \n",
-                    "**`!RecuperarRS  `** - Forma de recuperar la Clave secreta \n",
-                    "**`!QuestZerk    `** - Guía de zerk azul \n",
-                    "**`!Zerk120      `** - Guía de título Marquis & Vice General Lord \n",
-                    "**`!ArmaLGDG13   `** - Guía de Arma Legend DG13\n",
-                    "**`!SetLGDG13    `** - Guía de equipamiento Legend DG13\n"]},
+                {"Support_Priviate_Esp0":[
+
+                    "**`!RecuperarID   `** - Forma de recuperar la ID \n",
+                    "**`!RecuperarClave`** - Forma de recuperar la contraseña \n",
+                    "**`!ErrorLauncher `** - Solución de problema con el cliente \n",
+                    "**`!PaginaOficial `** - Página Oficial del videojuego\n",
+                    "**`!ComprarOro    `** - Forma de comprar oro dentro del videojuego \n",
+                    "**`!SubirNivel    `** - Manera de subir de nivel \n",
+                    "**`!GuiaZerkAzul  `** - Guía de zerk azul\n",
+                    "**`!Mediador      `** - Nombre de mediadores dentro del videojuego\n"]},
+
             {"Support_Priviate_Esp1":
-                [   "**`!ArmaLGDG14   `** - Guía de Arma Legend DG14 \n",
-                    "**`!QuestOrb     `** - Obtencion de**Orb** para el arma dg14 LG \n",
-                    "**`!SetLGDG14    `** - Guía de equipamiento Legend DG14 \n",
-                    "**`!TalisD15     `** - Nombre de talismanes de la colección del arma de mythical degree 15\n",
-                    "**`!ArmaLGDG15   `** - Guía de Arma Legend DG15 \n",
-                    "**`!Phantom      `** - Extensión de quest para la obtención del Arma Legend D15 en Phantom Desert\n",
-                    "**`!FlamingTree  `** - Extensión de quest para la obtención del Arma Legend D15 en Flaming Tree \n",
-                    "**`!SetMytDG15   `** - Guía de equipamiento Mítico DG15 \n"]}],
+                [   
+                    "**`!GuiaPhantom       `** - Guía de la ciudad de fantasmas\n",
+                    "**`!ArmaDG13          `** - Guía de Arma Legend DG13\n",
+                    "**`!EquipamentoLGDG13 `** - Guía de equipamiento Legend DG13\n",
+                    "**`!GuiaOrb           `** - Obtencion de**Orb** para el arma dg14 LG \n",
+                    "**`!GuiaArbolLlameante`** - Extensión de quest para la obtención del Arma Legend D15 en Flaming Tree \n"
+                    ]}],
+
+
+
+
+
 
             "comandos2":[
                 {"Support_C_English":[
                     "Greetings! This is the Sro Servivenet chatbot, below you have some of the many keyword conversations our chatbot attends to \n\n", 
-                    "**`!clienterror  `** - Fix client error \n",
-                    "**`!RecoverID    `** - How to recover ID\n",
-                    "**`!RecoverPW    `** - How to recover password\n",
-                    "**`!RecoverPS    `** - How to recover secret password \n",
-                    "**`!QuestZerk    `** - Blue zerk guide  \n",
-                    "**`!Zerk120      `** - Marquis & Vice General Lord title guide  \n",
-                    "**`!WeaponLGDG13 `** - Legend DG13 Weapon Guide\n",
-                    "**`!SetLGDG13    `** - Legend DG13 Equipment Guide\n",
-                    "**`!WeaponLGDG14 `** - Legend DG14 Weapon Guide\n",
+                    "**`!RecoverID     `** - Way to recover ID\n",
+                    "**`!RecoverPW     `** - Way to recover password\n",
+                    "**`!clienterror   `** - Fix client error \n",
+                    "**`!Website       `** - Official website of the video game \n",
+                    "**`!BuyGold       `** - Way to buy gold within the video game \n",
+                    "**`!LevelUp       `** - Way to level up \n",
+                    "**`!BlueZerk      `** - Blue zerk guide\n",
+                    "**`!MediatorsName `** - Mediators' names within the video game\n",
                     "To see the rest of the commands I respond to, type>**`!help`** \n"]}],  
                     
                     "help":[
                         {"Support_Priviate_English0":[
-                            "**`!clienterror  `** - Fix client error \n",
-                            "**`!RecoverID    `** - How to recover ID\n",
-                            "**`!RecoverPW    `** - How to recover password\n",
-                            "**`!RecoverPS    `** - How to recover secret password \n",
-                            "**`!QuestZerk    `** - Blue zerk guide  \n",
-                            "**`!Zerk120      `** - Marquis & Vice General Lord title guide  \n",
-                            "**`!WeaponLGDG13 `** - Legend DG13 Weapon Guide\n",
-                            "**`!SetLGDG13    `** - Legend DG13 Equipment Guide\n"]},
+                    "**`!RecoverID     `** - Way to recover ID\n",
+                    "**`!RecoverPW     `** - Way to recover password\n",
+                    "**`!clienterror   `** - Fix client error \n",
+                    "**`!Website       `** - Official website of the video game \n",
+                    "**`!BuyGold       `** - Way to buy gold within the video game \n",
+                    "**`!LevelUp       `** - Way to level up \n",
+                    "**`!BlueZerk      `** - Blue zerk guide\n",
+                    "**`!MediatorsName `** - Mediators' names within the video game\n"]},
                     
                     {"Support_Priviate_English1":
-                        [   "**`!WeaponLGDG14 `** - Legend DG14 Weapon Guide\n",
-                            "**`!QuestOrb     `** - Get **Orb** for LGdg14 weapon\n",
-                            "**`!SetLGDG14    `** - Legend DG14 Equipment Guide\n",
-                            "**`!TalisD15     `** - Talismans names of the collection mythical weapons dg15\n",
-                            "**`!ArmaLGDG15   `** - Arma Legend DG15 Guide\n",
-                            "**`!Phantom      `** - Quest extension to get the Legend D15 Weapon in Phantom Desert\n",
-                            "**`!FlamingTree  `** - Quest extension to get the Legend Weapon D15 in Flaming Tree \n",
-                            "**`!SetMytDG15   `** - Mythic DG15 Gear Guide  \n"]}],
+                        [
+                    "**`!PhantomGuide  `** - Quest extension to get the Legend D15 Weapon in Phantom Desert\n",
+                    "**`!WeaponLGDG13  `** - Legend DG13 Weapon Guide\n",
+                    "**`!SetLGDG13     `** - Legend DG13 Equipment Guide\n",
+                    "**`!QuestOrb      `** - Way to get **Orb** for LGdg14 weapon\n",
+                    "**`!FlamingTree   `** - Quest: Extension to get the Legend Weapon D15 in Flaming Tree \n"]}],
 
 
 
@@ -260,8 +279,7 @@
             ],
             
             "RespuestasPred": [
-                {"respuestas":["¿Perdon?", "¿Disculpe?"
-                    , "De momento no le puedo solventar sus preguntas, puede contactar a algun admin en el juego para que solvente sus preguntas, los cuales son:\n[GM]Celes \n[GM]Nao \n[GM]Scream \n[GM]Servivenet"]}              
+                {"respuestas":["De momento no le puedo solventar sus preguntas, intente escribir !Ayuda la mayoria de comandos a los que respondo.\nAt the moment I can not answer your questions, try typing '!Help' to check the commands I respond to."]}              
                 ]
         
         

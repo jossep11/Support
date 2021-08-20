@@ -27,7 +27,7 @@ return 1;
 
 
 //Despedidas----------------------------------------------------------------------------------- 2
-var despedidas = ['chao','hasta luego', 'nos vemos', 'un placer', 'gracias' , 'gracias por todo', 'muchas gracias', 'adios'];
+var despedidas = ['chao','hasta luego', 'nos vemos', 'un placer', 'gracias' , 'gracias por todo', 'muchas gracias', 'adios', 'gracias por la informacion'];
 var rated_Despedida    = [];
 
 despedidas.forEach(function(despedida) {
@@ -314,10 +314,149 @@ rated_guia_zerk_azul.sort(function(a, b) {
     }
 }); 
 //END Guia zerkazul
+
+
+//Guia EquipamentoLGDG13  ----------------------------------------------------------------------------------- 14
+var EquipamentoLGDG13=  ['¿me podria facilitar la guía del equipamento lg dg13?', '¿me podria facilitar la guía del equipamento dg13?' ,'necesito la guia del equipamento lg dg13', 'necesito la guia del equipamento dg13', 'guia equipamento lg dg13', 'equipamentolgdg13', 'equipamentodg13', '¿me podria facilitar la guía del ropa lg dg13?', '¿me podria facilitar la guía del ropa dg13?' ,'necesito la guia del ropa lg dg13'];
+var ratedEquipamentoDG13  = [];
+
+EquipamentoLGDG13.forEach(function(EquipamentoDG13) {
+    ratedEquipamentoDG13.push({
+      EquipamentoDG13: EquipamentoDG13,
+    distance: distance(contentss, EquipamentoDG13, { caseSensitive: false })
+    });
+});
+
+ratedEquipamentoDG13.sort(function(a, b) {
+    if (a.distance < b.distance) {
+    return 1;
+    } else if (a.distance > b.distance) {
+    return -1;
+    } else {
+    return 0;
+    }
+}); 
+//END Guia Equipamentodg13
+
+
+//Guia rated_armalgdg13----------------------------------------------------------------------------------- 13
+var ArmaLgdg13= ['¿me podria facilitar la guía del arma lg dg13?', '¿me podria facilitar la guía del arma dg13?' ,'necesito la guia del arma lg dg13', 'necesito la guia del arma dg13', 'guia arma lg dg13', 'armadg13', 'armalgdg13'];
+var rated_armalgdg13  = [];
+
+ArmaLgdg13.forEach(function(armadg13) {
+    rated_armalgdg13.push({
+      armadg13: armadg13,
+    distance: distance(contentss, armadg13, { caseSensitive: false })
+    });
+});
+
+rated_armalgdg13.sort(function(a, b) {
+    if (a.distance < b.distance) {
+    return 1;
+    } else if (a.distance > b.distance) {
+    return -1;
+    } else {
+    return 0;
+    }
+}); 
+//END Guia rated_armalgdg13
+
+
+//Guia Quien eres----------------------------------------------------------------------------------- 13
+var quien_eres= ['¿quien eres?','quien eres', 'como te llamas?', 'como te llamas', 'dime quien eres'];
+var nombre  = [];
+
+quien_eres.forEach(function(minombre) {
+    nombre.push({
+      minombre: minombre,
+    distance: distance(contentss, minombre, { caseSensitive: false })
+    });
+});
+
+nombre.sort(function(a, b) {
+    if (a.distance < b.distance) {
+    return 1;
+    } else if (a.distance > b.distance) {
+    return -1;
+    } else {
+    return 0;
+    }
+}); 
+//END Quien eres
+
+
+//Guia que haces----------------------------------------------------------------------------------- 13
+var quehaces= ['que haces?','que estas haciendo'];
+var que_hago  = [];
+
+quehaces.forEach(function(haciendo) {
+    que_hago.push({
+      haciendo: haciendo,
+    distance: distance(contentss, haciendo, { caseSensitive: false })
+    });
+});
+
+que_hago.sort(function(a, b) {
+    if (a.distance < b.distance) {
+    return 1;
+    } else if (a.distance > b.distance) {
+    return -1;
+    } else {
+    return 0;
+    }
+}); 
+//END que haces
+
+
+
+
+//Guia Quien eres----------------------------------------------------------------------------------- 13
+var eres_un_humano= ['¿eres humano?','eres un humano'];
+var humano  = [];
+
+eres_un_humano.forEach(function(soyhumano) {
+    humano.push({
+      soyhumano: soyhumano,
+    distance: distance(contentss, soyhumano, { caseSensitive: false })
+    });
+});
+
+humano.sort(function(a, b) {
+    if (a.distance < b.distance) {
+    return 1;
+    } else if (a.distance > b.distance) {
+    return -1;
+    } else {
+    return 0;
+    }
+}); 
+//END Quien eres
+
+
+
 return [rated_Saludo, rated_Despedida, rated_recuperarID, rated_recuperarClave, rated_Problema_Luancher, 
   rated_Conseguir_Mediador, rated_Pagina_VideoJuego, rated_Silk_Via_PayPal, rated_Subir_Nivel, rated_ComprarGold,
-  rated_guiaphanton, rated_guia_zerk_azul];
+  rated_guiaphanton, rated_guia_zerk_azul, rated_armalgdg13, ratedEquipamentoDG13, nombre,
+  que_hago,
+  humano];
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -644,7 +783,122 @@ rated_Blue_Zerk_Guide.sort(function(a, b) {
 //END blue zerk guide
 
 
+//Guia SetLGDG13  ----------------------------------------------------------------------------------- 14
+var SetLGDG13=  ['could you provide me with the set lg dg13 guide?', 'i need the set lg dg13 guide', 'need the set lg dg13 guide', 'setlgdg13', 'setdg13'];
+var ratedSetDg13  = [];
 
+SetLGDG13.forEach(function(setdg13) {
+    ratedSetDg13.push({
+      setdg13: setdg13,
+    distance: distance(contentss, setdg13, { caseSensitive: false })
+    });
+});
+
+ratedSetDg13.sort(function(a, b) {
+    if (a.distance < b.distance) {
+    return 1;
+    } else if (a.distance > b.distance) {
+    return -1;
+    } else {
+    return 0;
+    }
+}); 
+//END Guia Equipamentodg13
+
+
+//Guia rated_armalgdg13----------------------------------------------------------------------------------- 13
+var weaponLgdg13= ['could you provide me with the weapon lg dg13 guide?', 'i need the weapon lg dg13 guide', 'need the weapon lg dg13 guide', 'weaponlgdg13', 'weapondg13'];
+var rated_weaponlgdg13  = [];
+
+weaponLgdg13.forEach(function(weapondg13) {
+    rated_weaponlgdg13.push({
+      weapondg13: weapondg13,
+    distance: distance(contentss, weapondg13, { caseSensitive: false })
+    });
+});
+
+rated_weaponlgdg13.sort(function(a, b) {
+    if (a.distance < b.distance) {
+    return 1;
+    } else if (a.distance > b.distance) {
+    return -1;
+    } else {
+    return 0;
+    }
+}); 
+//END Guia rated_armalgdg13
+
+
+
+//Guia who are you ----------------------------------------------------------------------------------- 13
+var whoyouare= ['who are you?','who are you', 'who you are', 'what is your name' , 'whats your name' , 'whats ur name' , , 'tell me who are you', 'tell me who you are'];
+var rate_whoyouare  = [];
+
+whoyouare.forEach(function(youare) {
+    rate_whoyouare.push({
+      youare: youare,
+    distance: distance(contentss, youare, { caseSensitive: false })
+    });
+});
+
+rate_whoyouare.sort(function(a, b) {
+    if (a.distance < b.distance) {
+    return 1;
+    } else if (a.distance > b.distance) {
+    return -1;
+    } else {
+    return 0;
+    }
+}); 
+//END who are you
+
+
+//Guia what are you doing----------------------------------------------------------------------------------- 13
+var whatyoudoing= ['what are you doing?', 'what you doing', 'whatcha doing','what do you do', 'what you do'];
+var youdoing  = [];
+
+whatyoudoing.forEach(function(_youdoing) {
+    youdoing.push({
+      _youdoing: _youdoing,
+    distance: distance(contentss, _youdoing, { caseSensitive: false })
+    });
+});
+
+youdoing.sort(function(a, b) {
+    if (a.distance < b.distance) {
+    return 1;
+    } else if (a.distance > b.distance) {
+    return -1;
+    } else {
+    return 0;
+    }
+}); 
+//END que haces
+
+
+
+
+//Guia Quien eres----------------------------------------------------------------------------------- 13
+var areyouhuman= ['are you a human?','are you a human being?', 'are you human?'];
+var humanbeing  = [];
+
+areyouhuman.forEach(function(imhuman) {
+    humanbeing.push({
+      imhuman: imhuman,
+    distance: distance(contentss, imhuman, { caseSensitive: false })
+    });
+});
+
+humanbeing.sort(function(a, b) {
+    if (a.distance < b.distance) {
+    return 1;
+    } else if (a.distance > b.distance) {
+    return -1;
+    } else {
+    return 0;
+    }
+}); 
+//END Quien eres
 
   
 return [rated_Greetings, rated_Goodbyes, rated_recuperarID,
@@ -656,6 +910,11 @@ return [rated_Greetings, rated_Goodbyes, rated_recuperarID,
   rated_LevelUp,
   rated_buy_gold,
   rated_guidephantom,
-  rated_Blue_Zerk_Guide];
+  rated_Blue_Zerk_Guide,
+  ratedSetDg13,
+  rated_weaponlgdg13,
+  rate_whoyouare,
+  youdoing,
+  humanbeing];
 }
   module.exports = {Spanish_logic, English_logic};

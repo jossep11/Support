@@ -11,11 +11,13 @@ module.exports = {
 //----------------------------------------*SPANISH const called from data_fuctions.js*-------------------------------------
 const [saludos, despedidas, recuperarID, recuperarClave, rated_Problema_Luancher, 
     rated_Conseguir_Mediador, rated_Pagina_VideoJuego, rated_Silk_Via_PayPal, rated_Subir_Nivel, rated_ComprarGold,
-    rated_guiaphanton, rated_guia_zerk_azul ] = data_english_spanish.Spanish_logic(contentss);   
+    rated_guiaphanton, rated_guia_zerk_azul, rated_armalgdg13, ratedEquipamentoDG13, nombre,
+    que_hago, humano] = data_english_spanish.Spanish_logic(contentss);   
     
 //----------------------------*ENGLISH const called from data_fuctions.js*-------------------------------------
  const [greetings, goodbyes, recoverID, recoverPW, LauncherError, Find_Mediator, OficialWeb,
-        Silk_PayPal, Level_UP, BuyGold, Phantom_Guide, BlueZerk_Guide] = data_english_spanish.English_logic(contentss);   
+        Silk_PayPal, Level_UP, BuyGold, Phantom_Guide, BlueZerk_Guide, ratedSetDg13, rated_weaponlgdg13,
+        rate_whoyouare, youdoing, humanbeing] = data_english_spanish.English_logic(contentss);   
        // console.log(message.author.tag);
        const ChannelAuditx =client.channels.cache.find(channel=> channel.id=== "864924179043450901"); 
        const ChannelAudit_General =client.channels.cache.find(channel=> channel.id=== "877635359301853184"); 
@@ -25,7 +27,7 @@ const [saludos, despedidas, recuperarID, recuperarClave, rated_Problema_Luancher
        ChannelAudit_General.send(`**[**__${date_send}__**]** :pencil: **${message.author.tag}** (__${message.author.id}__) has asked:\n${message.content}`);
 
 //conditional greeting--------------------------------------------------------------------------------------------------- 1
- if (saludos[0].distance >= 0.89 ) {
+ if (saludos[0].distance >= 0.91 ) {
      console.log(saludos[0].distance);
 let saludos_answer = palabras.Saludos;
 let respuestas = saludos_answer[1].respuestas;
@@ -48,7 +50,7 @@ message.author.send(respuestas[aleatorio]);
 
 //Condicional RecuperarID--------------------------------------------------------------------------------------------------- 3
 else if(recuperarID[0].distance>=0.89 && contentss.includes('id') || recuperarID[0].distance>=0.89 && contentss.includes('mi usu')){
-   // console.log(recuperarID[0].distance);
+    console.log(recuperarID[0].distance);
     //console.log("Running " + recuperarID[0].recuperarid + "?");// 
     Embed
     .setColor('#0099ff')
@@ -139,7 +141,7 @@ else if(rated_Silk_Via_PayPal[0].distance>=0.89){
 
 //COMO SUBIR DE NIVEL----------------------------------------------------------------------------------- 9
 else if(rated_Subir_Nivel[0].distance>=0.89){
-    //console.log(rated_Subir_Nivel[0].distance);
+    console.log(rated_Subir_Nivel[0].distance);
     //console.log("Running " + rated_Subir_Nivel[0].SubirNivel + "?");// 
     Embed
     .setColor('#0099ff')
@@ -181,7 +183,7 @@ else if(rated_guiaphanton[0].distance>=0.89 && contentss.includes('guia phant') 
 
 //Guia zerk azul----------------------------------------------------------------------------------- 12
 else if(rated_guia_zerk_azul[0].distance>=0.89 && contentss.includes('zerk az') || rated_guia_zerk_azul[0].distance>=0.89 && contentss.includes('guiazer')){
-    //console.log(rated_guia_zerk_azul[0].distance);
+    console.log(rated_guia_zerk_azul[0].distance);
     //console.log("Running " + rated_guia_zerk_azul[0].guia_zerkAzul + "?");// i have to do it
     Embed
     .setColor('#0099ff')
@@ -194,7 +196,62 @@ else if(rated_guia_zerk_azul[0].distance>=0.89 && contentss.includes('zerk az') 
     message.author.send(Embed);
 }
 
+//Guia arma lg dg13----------------------------------------------------------------------------------- 13
+else if(rated_armalgdg13[0].distance>=0.89 && contentss.includes('arma') ){
+    console.log(rated_armalgdg13[0].distance);
+    //console.log("Running " + rated_guia_zerk_azul[0].guia_zerkAzul + "?");// i have to do it
+    Embed
+    .setColor('#0099ff')
+    .setTitle('Guía Arma Legend Dg13')
+    .setURL('https://wiki.srolatino-servers.com/faq/quest-arma-d13-legend-silkroad-latino/')
+    .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
+    .setImage('http://sro-latino.com/wp-content/uploads/2015/06/arma-lg-1.15.png')
+    .setDescription("En Silkroad Latino contamos con el maravilloso sistema de armas legendarias, las cuales podrás disfrutar desde Lv. 116, únete a esta maravillosa experiencia coleccionando los talismanes para crear tu arma legendaria DG 13")
+    .setTimestamp()
+    message.author.send(Embed);
+}
 
+//Guia arma lg dg13----------------------------------------------------------------------------------- 13
+else if(ratedEquipamentoDG13[0].distance>=0.89 && contentss.includes('equipamento') || ratedEquipamentoDG13[0].distance>=0.89 && contentss.includes('ropa')  ){
+    console.log(ratedEquipamentoDG13[0].distance);
+    //console.log("Running " + rated_guia_zerk_azul[0].guia_zerkAzul + "?");// i have to do it
+    Embed
+    .setColor('#0099ff')
+    .setTitle('Guía Equipamento Legend Dg13')
+    .setURL('https://wiki.srolatino-servers.com/faq/491/')
+    .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
+    .setImage('http://sro-latino.com/wp-content/uploads/2015/06/Set-lg-.1.5.png')
+    .setDescription("En silkroad latino servers para obtener el Set D13 Legend es necesario hacer una serie de quest que llevan una historia muy apsionada en la cual pueden sumergirse")
+    .setTimestamp()
+    message.author.send(Embed);
+}
+else if(nombre[0].distance>=0.91){
+    console.log(nombre[0].distance);
+    message.author.send('No tengo nombre, pero soy el chatbot de la empresa Servivenet y estoy para atender algunas de tus dudas de el videojuego');
+}
+
+else if(que_hago[0].distance>=0.91){
+    console.log(que_hago[0].distance);
+    message.author.send('Estoy esperando a tus preguntas, mi labor es responder');
+}
+else if(humano[0].distance>=0.91){
+    console.log(humano[0].distance);
+    message.author.send('No, soy una especie de inteligencia artificial, estoy acá solo para servir');
+}
+
+else if(rate_whoyouare[0].distance>=0.91){
+    console.log(rate_whoyouare[0].distance);
+    message.author.send('I do not have a name, but I am the chatbot of the Servivenet company and I am here to answer some of your questions about the videogame');
+}
+
+else if(youdoing[0].distance>=0.91){
+    console.log(youdoing[0].distance);
+    message.author.send('I am waiting for your questions, my job is to answer');
+}
+else if(humanbeing[0].distance>=0.91){
+    console.log(humanbeing[0].distance);
+    message.author.send('No, I am a kind of artificial intelligence, I am here only to serve');
+}
 
 
 
@@ -394,6 +451,40 @@ else if(goodbyes[0].distance>=0.89){
         message.author.send(Embed);
     }
     
+    //Guia arma lg dg13----------------------------------------------------------------------------------- 13
+else if(rated_weaponlgdg13[0].distance>=0.89 && contentss.includes('weapon') ){
+    console.log(rated_weaponlgdg13[0].distance);
+    //console.log("Running " + rated_guia_zerk_azul[0].guia_zerkAzul + "?");// i have to do it
+    Embed
+    .setColor('#0099ff')
+    .setTitle('Weapon Legend Dg13 Guide')
+    .setURL('https://wiki.srolatino-servers.com/faq/quest-arma-d13-legend-silkroad-latino/')
+    .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
+    .setImage('http://sro-latino.com/wp-content/uploads/2015/06/arma-lg-1.15.png')
+    .setDescription("Latin silkroad has a wonderful system of legendary weapons, which you can enjoy from Lv. 116, join this wonderful experience collecting the talismans to create your legendary weapon DG 13")
+    .setTimestamp()
+    message.author.send(Embed);
+}
+
+//Guia arma lg dg13----------------------------------------------------------------------------------- 13
+else if(ratedSetDg13[0].distance>=0.89 && contentss.includes('set') ){
+    console.log(ratedSetDg13[0].distance);
+    //console.log("Running " + rated_guia_zerk_azul[0].guia_zerkAzul + "?");// i have to do it
+    Embed
+    .setColor('#0099ff')
+    .setTitle('Legend Dg13 Set Guide')
+    .setURL('https://wiki.srolatino-servers.com/faq/491/')
+    .setThumbnail('https://wiki.srolatino-servers.com/wp-content/uploads/2019/12/logowiki-1.png')
+    .setImage('http://sro-latino.com/wp-content/uploads/2015/06/Set-lg-.1.5.png')
+    .setDescription("Latin silkroad servers to obtain the D13 Legend Set it is necessary to do a series of missions that have a very exciting story in which they can immerse themselves")
+    .setTimestamp()
+    message.author.send(Embed);
+}
+
+
+
+
+
 
 
 
@@ -425,8 +516,8 @@ else if(goodbyes[0].distance>=0.89){
         console.log(aleatorio);
 
         message.author.send(respuestas[aleatorio]);
-        console.log(message.content);
-        console.log(datex.toLocaleTimeString());
+        //console.log(message.content);
+        //console.log(datex.toLocaleTimeString());
         
         ChannelAuditx.send(`<@&797681991968882699>\n**[**__${date_send}__**]** :rotating_light: **${message.author.tag}** (__${message.author.id}__) has asked:\n${message.content}`);
        

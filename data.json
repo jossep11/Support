@@ -3,7 +3,7 @@
            "Saludos":[
             {"preguntas": ["hola", "como estas", "hey", "oye"]},
             {"respuestas": ["Hola, ¿como puedo ayudarle?", 
-                  "Hola, espero que estés bien, Dime en que podría ayudarle"
+                  "Hola, espero que estés bien, digame en que podría ayudarle"
                 , "¿Tienes algún problema en el juego?",
                 "Digame en que podría ayudarle", "Hola, soy todo oidos", "Saludos, ¿hay algo en lo que pueda servirle?"]}
         ],
@@ -222,9 +222,8 @@
                 [   
                     "**`!GuiaPhantom       `** - Guía de la ciudad de fantasmas\n",
                     "**`!ArmaDG13          `** - Guía de Arma Legend DG13\n",
-                    "**`!EquipamentoLGDG13 `** - Guía de equipamiento Legend DG13\n",
-                    "**`!GuiaOrb           `** - Obtencion de**Orb** para el arma dg14 LG \n",
-                    "**`!GuiaArbolLlameante`** - Extensión de quest para la obtención del Arma Legend D15 en Flaming Tree \n"
+                    "**`!EquipamentoLGDG13 `** - Guía de equipamiento Legend DG13\n"
+                   
                     ]}],
 
 
@@ -260,9 +259,7 @@
                         [
                     "**`!PhantomGuide  `** - Quest extension to get the Legend D15 Weapon in Phantom Desert\n",
                     "**`!WeaponLGDG13  `** - Legend DG13 Weapon Guide\n",
-                    "**`!SetLGDG13     `** - Legend DG13 Equipment Guide\n",
-                    "**`!QuestOrb      `** - Way to get **Orb** for LGdg14 weapon\n",
-                    "**`!FlamingTree   `** - Quest: Extension to get the Legend Weapon D15 in Flaming Tree \n"]}],
+                    "**`!SetLGDG13     `** - Legend DG13 Equipment Guide\n"]}],
 
 
 

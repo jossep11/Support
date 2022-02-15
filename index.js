@@ -1,12 +1,23 @@
 const Discord = require('discord.js');
+
+const ChannelIDs = require("./commands/ChannelIDs.json");
+const ServerToken = require("./ServerToken.json");
+
+const alexa = require("alexa-bot-api-v3");
+const ai = new alexa();
+
+var distance = require('jaro-winkler');
+
+
+
 const pagination = require('./pagination.js');
 const fs = require('fs');
 const path = require("./data.json");
-const ChannelIDs = require("./commands/ChannelIDs.json");
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 let cooldown =new Set();
-const token= ChannelIDs.token;
+
+const token = ServerToken.token;
 //const test = require ("./test");
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
@@ -20,7 +31,6 @@ for (const file of commandFiles) {
 function emoji (id) {
     return client.emojis.cache.get(id).toString();
 }
-
 
 
 
@@ -70,24 +80,32 @@ client.on('message', async message =>{
     const contentss = args.toLowerCase(); 
     if(message.author.bot) return;  
 
+    // console.log(message.author.id);
+    // console.log(message.author.tag);
+    // console.log(message.author.username);
 
+
+
+
+
+    
 
 //    message.channel.send("Beep").then((message1) => message1.edit("Boop!"));
 
- 
 
- if(message.channel.id==ChannelIDs.SupportChannel || message.channel.type==='dm'){
-    client.commands.get('Words').execute(message, args, contentss, Embed, client, Discord);
+ if(message.channel.id==ChannelIDs.SupportChannel || message.channel.type==='dm' || message.channel.id==ChannelIDs.SupportChannelEnglish){
  
-    if (message.channel.id==ChannelIDs.SupportChannel){
+ 
+    if (message.channel.id==ChannelIDs.SupportChannel || message.channel.id==ChannelIDs.SupportChannelEnglish){
         message.delete({ timeout: 3000 })//elimina el mensaje    
     } 
     
+
     const palabras = path.contenido;
     let comandos= palabras.comandos;
     let respuestas = comandos[0].cmd;
-    
- }   
+ 
+
 
  
  //when you type 'r' it'll activated again the role's section
@@ -100,24 +118,27 @@ client.on('message', async message =>{
 
 }
 
-
 //al escribir spanish section mostrara ciertos comandos los cuales el bot puede entender
 else if(contentss===('spanish section') && message.author.id==ChannelIDs.JossepID){
     
   client.commands.get('SupportSpanish').execute(message, Discord, path);
-
+ 
 }
 
-//whenever you type '!ayuda' it'lll show some other keywords that the bot can understand
-else if(message.channel.type==='dm' || message.channel.id===ChannelIDs.SupportChannel){
-
-  if (contentss.startsWith('ayuda')){
-  client.commands.get('SpanishInfo').execute(message, Discord, path, pagination);
+else if(contentss===('english section') && message.author.id==ChannelIDs.JossepID){
+    
+  client.commands.get('SupportEnglish').execute(message, Discord, path);
+  
 }
 
+else if( contentss!==('english section') || contentss!==('spanish section') ){
+  client.commands.get('Words1c').execute(message, args, contentss, Embed, client, Discord, ChannelIDs, distance);
+  if(message.channel.type==='dm'){
+    message.channel.startTyping();
+    message.channel.stopTyping(true);
+  }
 }
-
-
+}   
 /**
 // update it, just a gm could see this channel and on here, whatever it say, it's finna be sent it for the bot to another channel, so it could look a little bit better and none of the users could know who sent the message
 else if(message.channel.id==="772154069887615037"){
@@ -131,16 +152,21 @@ else if(message.channel.id==="772154069887615037"){
 }
  */
 
+
+
+
 if(message.content.startsWith('!clear')){
     message.channel.bulkDelete(50);
  }
 
 
+ 
 
-
+  const ChannelAudit =client.channels.cache.find(channel=> channel.id=== "864924179043450901"); 
+  //ChannelAudit.send(message.content+ '\n this');
+ 
 
 }
-
 
 
 
